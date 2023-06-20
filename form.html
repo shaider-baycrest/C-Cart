@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C-CART Assessment Tool - Demographics</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<section id="header">
+		<img src="logo_baycrest.svg" alt="logo"> 
+		<h1>Welcome to C-CART</h1>
+	</section>
+	<section id="intro">
+		<p>Caregiving is strenuous; however, resources are available across Canada. You are about to complete the Canadian Caregiver Assessment and Resources Tool. This self-assessment will take approximately 10 minutes to complete. After you complete the assessment
+		you will receive a list of resources based on your self-identified needs.</p>
+	  </section>
+	<form>
+		<fieldset>
+			<legend>Demographics</legend>
+			<p><em>The following questions will help us match the most appropriate resources to the person you care for based on their characteristics (Demographics)</em></p>
+			
+			<label for="age"><strong>What is the age of the person you care for?</strong></label>
+			<select id="age" name="age">
+				<option value="">Select an option</option>
+				<option value="17 or under">17 or under</option>
+				<option value="18-64">18-64</option>
+				<option value="65 and over">65 and over</option>
+			</select>
+
+			<!-- <br><hr> -->
+
+			<label for="relationship"><strong>What is your relationship with the person you care for?</strong></label>
+			<select id="relationship" name="relationship">
+			  <option value="">Select an option</option>
+			  <option value="spouse">Spouse/partner</option>
+			  <option value="child">Child</option>
+			  <option value="parent">Parent</option>
+			  <option value="sibling">Sibling</option>
+			  <option value="auntuncle">Aunt/uncle</option>
+			  <option value="friend">Friend</option>
+			  <option value="community">Member of your community</option>
+			  <option value="other">Other</option>
+			</select>
+			
+			<!-- <br><hr> -->
+
+			<label for="province"><strong>Which province do you live in?</strong></label>
+			<select id="province" name="province">
+			  <option value="">Select an option</option>
+			  <option value="Alberta">Alberta</option>
+			  <option value="British Columbia">British Columbia</option>
+			  <option value="Manitoba">Manitoba</option>
+			  <option value="New Brunswick">New Brunswick</option>
+			  <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+			  <option value="Northwest Territories">Northwest Territories</option>
+			  <option value="Nova Scotia">Nova Scotia</option>
+			  <option value="Nunavut">Nunavut</option>
+			  <option value="Ontario">Ontario</option>
+			  <option value="Prince Edward Island">Prince Edward Island</option>
+			  <option value="Quebec">Quebec</option>
+			  <option value="Saskatchewan">Saskatchewan</option>
+			  <option value="Yukon">Yukon</option>
+			</select>
+			
+			<label for="area"><strong>Do you live in a rural or urban area?</strong></label>
+			<select id="area" name="area">
+			  <option value="">Select an option</option>
+			  <option value="rural">Rural</option>
+			  <option value="urban">Urban</option>
+			</select>
+			<!-- <br><hr> -->
+
+			<label for="setting"><strong>What setting does the person you care for live in?</strong></label>
+			<select id="setting" name="setting">
+			<option value="">Select an option</option>
+			<option value="LTC">LTC (Long-Term Care)</option>
+			<option value="retirement">Retirement residence</option>
+			<option value="grouphome">Group home</option>
+			<option value="assistedliving">Assisted living</option>
+			<option value="homeless">Homeless</option>
+			<option value="shelter">Shelter</option>
+			<option value="hospital">Hospital setting</option>
+			<option value="independentliving">Independent living (e.g. house, apartment)</option>
+			</select>
+
+			<label for="veteran"><strong>Is the person you are caring for a veteran?</strong></label>
+			<div>
+				<label><input type="radio" name="veteran" value="yes">Yes</label>
+				<label><input type="radio" name="veteran" value="no">No</label>
+			</div>
+
+			<fieldset id="registered-fieldset" style="display: none;">
+				<label for="registered"><strong>Are they registered with the Department of Veteran Affairs?</strong></label>
+				<div>
+					<label><input type="radio" name="registered" value="yes">Yes</label>
+					<label><input type="radio" name="registered" value="no">No</label>
+				</div>
+			</fieldset>
+		</fieldset>
+
+		<fieldset>
+			<legend>General Assessment & Resource Knowledge</legend>
+			<p><em>The following questions will help us understand the challenges caregivers experience to access services and resources (General Assessment and Resources Knowledge)</em></p>
+			
+			<label><strong>Please select all that apply: What are some barriers you encounter in your caregiving experience</strong></label><br>
+			<input type="checkbox" name="barriers[]" value="Unsure where to find professional help"> Unsure where to find professional help<br>
+			<input type="checkbox" name="barriers[]" value="Financial reasons (e.g., cannot afford it, assistance is too expensive) unable to afford"> Financial reasons (e.g., cannot afford it, assistance is too expensive) unable to afford<br>
+			<input type="checkbox" name="barriers[]" value="Family reasons (e.g., availability, capacity to help) family members not available to help"> Family reasons (e.g., availability, capacity to help) family members not available to help<br>
+			<input type="checkbox" name="barriers[]" value="Professional help is not available"> Professional help is not available<br>
+			<input type="checkbox" name="barriers[]" value="Reasons related to eligibility for services, health system, or waitlists, flexibility hours/times"> Reasons related to eligibility for services, health system, or waitlists, flexibility hours/times<br>
+			<input type="checkbox" name="barriers[]" value="Do not qualify for services due to age or geographical area"> Do not qualify for services due to age or geographical area<br>
+			<input type="checkbox" name="barriers[]" value="Long waitlist"> Long waitlist<br>
+			<input type="checkbox" name="barriers[]" value="Personal physical health"> Personal physical health<br>
+			<input type="checkbox" name="barriers[]" value="Personal mental health"> Personal mental health<br>
+			<input type="checkbox" name="barriers[]" value="Don&#39;t know what services exist"> Don’t know what services exist<br>
+			<input type="checkbox" name="barriers[]" value="Not enough time"> Not enough time<br>
+			<input type="checkbox" name="barriers[]" value="Services are not provided in my language"> Services are not provided in my language<br>
+			<input type="checkbox" name="barriers[]" value="Services are not culturally sensitive"> Services are not culturally sensitive<br>
+			<input type="checkbox" name="barriers[]" value="Difficulty with technology"> Difficulty with technology<br>
+
+			<br>
+
+			<label><strong>Please select all that apply: Where do you go when you have a question/concern related to the condition of the person you care for?</strong></label><br>
+			<input type="checkbox" name="question_concern[]" value="Family doctor"> Family doctor<br>
+			<input type="checkbox" name="question_concern[]" value="Counsellor"> Counsellor<br>
+			<input type="checkbox" name="question_concern[]" value="Religious/spiritual group"> Religious/ spiritual group<br>
+			<input type="checkbox" name="question_concern[]" value="Pharmacist"> Pharmacist<br>
+			<input type="checkbox" name="question_concern[]" value="Healthcare team"> Healthcare team<br>
+			<input type="checkbox" name="question_concern[]" value="Agency/organization"> Agency/organization<br>
+			<input type="checkbox" name="question_concern[]" value="Friend, peer"> Friend, peer<br>
+			<input type="checkbox" name="question_concern[]" value="Internet"> Internet<br>
+			<input type="checkbox" name="question_concern[]" value="Social media"> Social media<br>
+			<input type="checkbox" name="question_concern[]" value="Family"> Family<br>
+			<input type="checkbox" name="question_concern[]" value="Other"> Other<br>
+
+			<br>
+
+			<label><strong>How often do you engage in self-care activities?</strong><br></label>
+			<label>By self-care we mean engaging in physical activities such as exercising and eating healthy, or mental activities such as reading a book or journaling, spiritual or social activities such as meditation or visiting with friends. Or any other activities that result in reduced stress</label>
+			<div class="likert-scale">
+			  <label><input type="radio" name="self_care" value="0">Never</label>
+			  <label><input type="radio" name="self_care" value="1">Rarely</label>
+			  <label><input type="radio" name="self_care" value="2">Sometimes</label>
+			  <label><input type="radio" name="self_care" value="3">Often</label>
+			  <label><input type="radio" name="self_care" value="4">Very often</label>
+			</div>
+			
+			
+		  </fieldset>
+
+
+		  <fieldset>
+			<legend>Finance</legend>
+			<p><em>The following questions will help us reccomend financial resources you might be eligible for (Finance)</em></p>
+
+			<label><strong>How often do you have financial concerns about covering your basic necessities?</strong><br></label>
+			<label>By basic necessities we mean ...</label>
+			<div class="likert-scale">
+				<label><input type="radio" name="basic_needs" value="0">Never</label>
+				<label><input type="radio" name="basic_needs" value="1">Rarely</label>
+				<label><input type="radio" name="basic_needs" value="2">Sometimes</label>
+				<label><input type="radio" name="basic_needs" value="3">Often</label>
+				<label><input type="radio" name="basic_needs" value="4">Very often</label>
+			  </div>
+
+			  <br>
+
+			  <label for="care_affect"><strong>Do your caregiving responsibilities negatively affect your employment or lead to changes in your work/school situation?</strong></label>
+			  <div>
+				  <label><input type="radio" name="care_affect" value="yes">Yes</label>
+				  <label><input type="radio" name="care_affect" value="no">No</label>
+			  </div>
+  
+			  <fieldset id="care_affect-fieldset" style="display: none;">
+				  <label><strong>Please select all that apply:</strong></label>
+				  <label>Where do you go when you have a question/concern related to the condition of the person you care for?</label>
+				  <div>
+					<input type="checkbox" name="neg_affect[]" value="Reduced work hours"> Reduced work hours<br>
+					<input type="checkbox" name="neg_affect[]" value="Sick leave"> Sick leave<br>
+					<input type="checkbox" name="neg_affect[]" value="Unpaid leave"> Unpaid leave<br>
+					<input type="checkbox" name="neg_affect[]" value="Had to quit school"> Had to quit school<br>
+					<input type="checkbox" name="neg_affect[]" value="Had to quit a job"> Had to quit a job<br>
+					<input type="checkbox" name="neg_affect[]" value="Got fired from a job"> Got fired from a job<br>
+				  </div>
+			  </fieldset>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Knowledge of the condition & Preparedness to give care</legend>
+			<p><em>The following questions are about the condition of the person you care for. These questions will help identify resources specific to their condition (Knowledge of the condition and Preparedness to give care)</em></p>
+
+			<label><strong>Check all that apply:</strong></label>
+			<label>What is the condition/illness of the person you care for?</label>
+			<div>
+			<input type="checkbox" name="condition[]" value="Dementia"> Dementia<br>
+			<input type="checkbox" name="condition[]" value="Alzheimer&#39;s"> Alzheimer’s<br>
+			<input type="checkbox" name="condition[]" value="Frontotemporal"> Frontotemporal<br>
+			<input type="checkbox" name="condition[]" value="Vascular dementia"> Vascular dementia<br>
+			<input type="checkbox" name="condition[]" value="Dementia with lewy body"> Dementia with lewy body<br>
+			<input type="checkbox" name="condition[]" value="Korsakoff"> Korsakoff<br>
+			<input type="checkbox" name="condition[]" value="Parkinson&#39;s"> Parkinson’s<br>
+			<input type="checkbox" name="condition[]" value="Heart disease"> Heart disease<br>
+			<input type="checkbox" name="condition[]" value="MCI (Mild Cognitive Impairment)"> MCI (Mild Cognitive Impairment)<br>
+			<input type="checkbox" name="condition[]" value="Stroke"> Stroke<br>
+			<input type="checkbox" name="condition[]" value="ALS (Amyotrophic lateral sclerosis)"> ALS (Amyotrophic lateral sclerosis)<br>
+			<input type="checkbox" name="condition[]" value="MS (Multiple sclerosis)"> MS (Multiple sclerosis)<br>
+			<input type="checkbox" name="condition[]" value="Muscular dystrophy"> Muscular dystrophy<br>
+			<input type="checkbox" name="condition[]" value="Depression"> Depression<br>
+			<input type="checkbox" name="condition[]" value="Bipolar"> Bipolar<br>
+			<input type="checkbox" name="condition[]" value="Anxiety"> Anxiety<br>
+			<input type="checkbox" name="condition[]" value="Schizophrenia"> Schizophrenia<br>
+			<input type="checkbox" name="condition[]" value="PTSD (Post-traumatic stress disorder)"> PTSD (Post-traumatic stress disorder)<br>
+			<input type="checkbox" name="condition[]" value="Eating disorders"> Eating disorders<br>
+			<input type="checkbox" name="condition[]" value="Addiction/Substance"> Addiction/Substance<br>
+			<input type="checkbox" name="condition[]" value="Down Syndrome"> Down Syndrome<br>
+			<input type="checkbox" name="condition[]" value="Autism Spectrum"> Autism Spectrum<br>
+			<input type="checkbox" name="condition[]" value="Neurodivergence"> Neurodivergence<br>
+			<input type="checkbox" name="condition[]" value="FASD (fetal alcohol spectrum disorder)"> FASD (fetal alcohol spectrum disorder)<br>
+			<input type="checkbox" name="condition[]" value="Brain Injury (TBI, aneurysm)"> Brain Injury (TBI, aneurysm)<br>
+			<input type="checkbox" name="condition[]" value="General developmental disability"> General developmental disability<br>
+			<input type="checkbox" name="condition[]" value="Frailty"> Frailty<br>
+			<input type="checkbox" name="condition[]" value="Vision loss"> Vision loss<br>
+			<input type="checkbox" name="condition[]" value="Hearing loss"> Hearing loss<br>
+			<input type="checkbox" name="condition[]" value="Mobility issues/fall risks"> Mobility issues/fall risks<br>
+			<input type="checkbox" name="condition[]" value="Cancer"> Cancer<br>
+			<input type="checkbox" name="condition[]" value="Diabetes"> Diabetes<br>
+			<input type="checkbox" name="condition[]" value="Cerebral palsy"> Cerebral palsy<br>
+			<input type="checkbox" name="condition[]" value="Cystic fibrosis"> Cystic fibrosis<br>
+			<input type="checkbox" name="condition[]" value="COPD"> COPD<br>
+			<input type="checkbox" name="condition[]" value="Long covid"> Long covid<br>
+			<input type="checkbox" name="condition[]" value="Sickle Cell Anemia"> Sickle Cell Anemia<br>
+			<input type="checkbox" name="condition[]" value="Fibromyalgia"> Fibromyalgia<br>
+			</div>
+
+			<br>
+
+			<label><strong>Would you like to find out more information about any of the following (check all that apply)?</strong></label>
+			<div>
+			<input type="checkbox" name="information[]" value="Home renovations/modifications for accessibility purposes"> Home renovations/modifications for accessibility purposes<br>
+			<input type="checkbox" name="information[]" value="Advance care planning"> Advance care planning<br>
+			<input type="checkbox" name="information[]" value="Transitioning into a different living situation/setting"> Transitioning into a different living situation/setting<br>
+			<input type="checkbox" name="information[]" value="Applying to LTC"> Applying to LTC<br>
+			<input type="checkbox" name="information[]" value="In-home support services like PSWs coming in"> In-home support services like PSWs coming in<br>
+			<input type="checkbox" name="information[]" value="Respite care"> Respite care<br>
+			<input type="checkbox" name="information[]" value="Capacity and guardianship"> Capacity and guardianship<br>
+			<input type="checkbox" name="information[]" value="Alternative schooling"> Alternative schooling<br>
+			<input type="checkbox" name="information[]" value="Housing"> Housing<br>
+			<input type="checkbox" name="information[]" value="Tutoring"> Tutoring<br>
+			<input type="checkbox" name="information[]" value="Access to food"> Access to food<br>
+			<input type="checkbox" name="information[]" value="Caregiver support groups"> Caregiver support groups<br>
+			<input type="checkbox" name="information[]" value="Finding a family physician"> Finding a family physician<br>
+			<input type="checkbox" name="information[]" value="Other"> Other<br>
+			</div>
+
+	
+
+		</fieldset>
+
+
+		  <fieldset>
+			<legend>Mood</legend>
+			<p><em>The following question will help in providing mental health related resources (Mood)</em></p>
+			<label><strong>For the next two statements, please indicate how often you feel that way.</strong><br><br></label>
+			<label>i. Little interest or pleasure in doing things</label>
+			<div class="likert-scale">
+			  <label><input type="radio" name="mood1" value="0">Not at all</label>
+			  <label><input type="radio" name="mood1" value="1">Several days</label>
+			  <label><input type="radio" name="mood1" value="2">More than half the days</label>
+			  <label><input type="radio" name="mood1" value="3">Nearly every day</label>
+			</div>
+			<br>
+			<label>ii. Feeling down, depressed, or hopeless</label>
+			<div class="likert-scale">
+			  <!-- <span>Not at all</span> -->
+			  <label><input type="radio" name="mood2" value="0">Not at all</label>
+			  <label><input type="radio" name="mood2" value="1">Several days</label>
+			  <label><input type="radio" name="mood2" value="2">More than half the days</label>
+			  <label><input type="radio" name="mood2" value="3">Nearly every day</label>
+			  <!-- <span>Nearly every day</span> -->
+			</div>
+		  </fieldset>
+
+		  <fieldset>
+			<legend>Caregiver Demographics</legend>
+			<p><em>The following set of questions are about your demographics as a caregiver. They will help us better understand the Canadian caregiver population (Caregiver Demographics)</em></p>
+
+			<label><strong>Which of the following describes your current gender identity? (check all that apply appropriate answers)</strong></label>
+			<div>
+			<input type="checkbox" name="gender[]" value="Agender"> Agender<br>
+			<input type="checkbox" name="gender[]" value="Bigender/Multigender"> Bigender/Multigender<br>
+			<input type="checkbox" name="gender[]" value="Gender fluid"> Gender fluid<br>
+			<input type="checkbox" name="gender[]" value="Genderqueer"> Genderqueer<br>
+			<input type="checkbox" name="gender[]" value="Man"> Man<br>
+			<input type="checkbox" name="gender[]" value="Nonbinary"> Nonbinary<br>
+			<input type="checkbox" name="gender[]" value="Questioning"> Questioning<br>
+			<input type="checkbox" name="gender[]" value="Transgender"> Transgender<br>
+			<input type="checkbox" name="gender[]" value="Two-Spirit"> Two-Spirit<br>
+			<input type="checkbox" name="gender[]" value="Woman"> Woman<br>
+			<input type="checkbox" name="gender[]" value="A gender not specified above (specify)"> A gender not specified above (specify)<br>
+			<input type="checkbox" name="gender[]" value="Prefer not to answer"> Prefer not to answer<br>
+			</div>
+
+			<br>
+
+			<label for="care_giver_age"><strong>What is your age?</strong></label>
+			<select name="care_giver_age" id="care_giver_age">
+			<option value="">Select an option</option>
+			<option value="15-24">15-24</option>
+			<option value="25-34">25-34</option>
+			<option value="35-44">35-44</option>
+			<option value="45-54">45-54</option>
+			<option value="55-64">55-64</option>
+			<option value="65-74">65-74</option>
+			<option value="75+">75+</option>
+			</select>
+			
+			<br>
+			<br>
+
+			<label><strong>What is your employment status (check all that apply)?</strong></label>
+			<div>
+			  <input type="checkbox" name="employment_status[]" value="Student"> Student<br>
+			  <input type="checkbox" name="employment_status[]" value="Employed"> Employed<br>
+			  <input type="checkbox" name="employment_status[]" value="Not employed"> Not employed<br>
+			  <input type="checkbox" name="employment_status[]" value="Retired"> Retired<br>
+			  <input type="checkbox" name="employment_status[]" value="Other"> Other<br>
+			</div>
+			
+
+
+			<br>
+
+			<label><strong>Do you identify as an indigenous person in Canada, such as First Nation, Métis, or Inuit?</strong></label>
+			<input type="radio" name="indigenous" value="Yes"> Yes<br>
+			<input type="radio" name="indigenous" value="No"> No<br>
+
+			<br>
+
+			<label><strong>Does the person you care for identify as an indigenous person in Canada, such as First Nation, Métis, or Inuit?</strong></label>
+			<input type="radio" name="care_recipient_indigenous" value="Yes"> Yes<br>
+			<input type="radio" name="care_recipient_indigenous" value="No"> No<br>
+
+			<br>
+
+			<label><strong>Select the population group(s) you identify with</strong></label>
+			<div>
+			<input type="checkbox" name="population_group[]" value="Arab"> Arab<br>
+			<input type="checkbox" name="population_group[]" value="Black"> Black<br>
+			<input type="checkbox" name="population_group[]" value="Chinese"> Chinese<br>
+			<input type="checkbox" name="population_group[]" value="Filipino"> Filipino<br>
+			<input type="checkbox" name="population_group[]" value="Japanese"> Japanese<br>
+			<input type="checkbox" name="population_group[]" value="Korean"> Korean<br>
+			<input type="checkbox" name="population_group[]" value="Latin American"> Latin American<br>
+			<input type="checkbox" name="population_group[]" value="South Asian"> South Asian (e.g., East Indian, Pakistani, Sri Lankan, etc.)<br>
+			<input type="checkbox" name="population_group[]" value="Southeast Asian"> Southeast Asian (e.g., Vietnamese, Cambodian, Laotian, Thai, etc.)<br>
+			<input type="checkbox" name="population_group[]" value="West Asian"> West Asian (e.g., Iranian, Afghan, etc.)<br>
+			<input type="checkbox" name="population_group[]" value="White"> White<br>
+			<input type="checkbox" name="population_group[]" value="Not listed"> Population group not listed above.<br>
+			<input type="checkbox" name="population_group[]" value="Prefer not to answer"> I prefer not to answer<br>
+			</div>
+
+
+		  </fieldset>
+		  
+		<button type="submit">Submit</button>
+	</form>
+
+	<footer>
+		<div class="footer-content">
+		  <div class="organization-name">Baycrest</div>
+		  <div class="contact-info">Contact us: 416-785-2500</div>
+		</div>
+	  </footer>
+
+	<script>
+		const registeredFieldset = document.getElementById('registered-fieldset');
+		const veteranRadios = document.querySelectorAll('input[name="veteran"]');
+
+		// Show registered fieldset if veteran is selected
+		for (const radio of veteranRadios) {
+			radio.addEventListener('click', () => {
+				if (radio.value === 'yes') {
+					registeredFieldset.style.display = 'block';
+				} else {
+					registeredFieldset.style.display = 'none';
+				}
+			});
+		}
+
+		const careAffectFieldset = document.getElementById('care_affect-fieldset');
+		const careAffectRadios = document.querySelectorAll('input[name="care_affect"]');
+
+		// Show caregiving fieldset if "Yes" is selected
+		for (const radio of careAffectRadios) {
+		radio.addEventListener('click', () => {
+			if (radio.value === 'yes') {
+			careAffectFieldset.style.display = 'block';
+			} else {
+			careAffectFieldset.style.display = 'none';
+			}
+		});
+		}
+
+		
+//For redirect
+		const form = document.querySelector('form');
+
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+
+			// Get selected values
+			const age = document.getElementById('age').value;
+			const province = document.getElementById('province').value;
+			const veteran = document.querySelector('input[name="veteran"]:checked').value;
+			const registered = document.querySelector('input[name="registered"]:checked')?.value;
+			const barriers = Array.from(document.querySelectorAll('input[name="barriers[]"]:checked')).map(el => el.value);
+			const mood1 = +document.querySelector('input[name="mood1"]:checked')?.value || 0;
+			const mood2 = +document.querySelector('input[name="mood2"]:checked')?.value || 0;
+			const mood = mood1 + mood2;
+			const relationship = document.getElementById("relationship").value;
+			const area = document.getElementById("area").value;
+			const setting = document.getElementById("setting").value;
+			const question_concern = Array.from(document.querySelectorAll('input[name="question_concern[]"]:checked')).map(el => el.value);
+			const self_care = +document.querySelector('input[name="self_care"]:checked')?.value || 0;
+			const basic_needs = +document.querySelector('input[name="basic_needs"]:checked')?.value || 0;
+			const care_affect = document.querySelector('input[name="care_affect"]:checked').value;
+			const neg_affect = Array.from(document.querySelectorAll('input[name="neg_affect[]"]:checked')).map(el => el.value);
+			const condition = Array.from(document.querySelectorAll('input[name="condition[]"]:checked')).map(el => el.value);
+			const information = Array.from(document.querySelectorAll('input[name="information[]"]:checked')).map(el => el.value);
+			const gender = Array.from(document.querySelectorAll('input[name="gender[]"]:checked')).map(el => el.value);
+			const care_giver_age = document.getElementById('care_giver_age').value;
+			const employment_status = Array.from(document.querySelectorAll('input[name="employment_status[]"]:checked')).map(el => el.value);
+			const indigenous = document.querySelector('input[name="indigenous"]:checked')?.value;
+			const care_recipient_indigenous = document.querySelector('input[name="care_recipient_indigenous"]:checked')?.value;
+			const population_group = Array.from(document.querySelectorAll('input[name="population_group[]"]:checked')).map(el => el.value);
+
+
+/* 			// Console log outputs
+			console.log('Age:', age);
+			console.log('Province:', province);
+			console.log('Veteran:', veteran);
+			console.log('Registered:', registered);
+			console.log('Barriers:', barriers);
+			console.log('Mood:', mood);
+			console.log('Relationship:', relationship);
+			console.log('Area:', area);
+			console.log('Setting:', setting);
+			console.log('Question Concern:', question_concern);
+			console.log('Self Care:', self_care);
+			console.log('Basic Needs:', basic_needs);
+			console.log('Care Affect:', care_affect);
+			console.log('Negative Affect:', neg_affect);
+			console.log('Condition:', condition);
+			console.log('Information:', information);
+			console.log('Gender:', gender);
+			console.log('Caregiver Age:', care_giver_age);
+			console.log('Employment Status:', employment_status);
+			console.log('Indigenous:', indigenous);
+			console.log('Care Recipient Indigenous:', care_recipient_indigenous);
+			console.log('Population Group:', population_group); */
+
+
+
+
+
+			const queryString = new URLSearchParams();
+				queryString.append('age', age);
+				queryString.append('province', province);
+				queryString.append('veteran', veteran);
+				if (registered) {
+    				queryString.append('registered', registered);
+				}
+				barriers.forEach((barrier) => {
+    				queryString.append('barriers[]', barrier);
+				});
+				queryString.append('mood', mood);
+				queryString.append('relationship', relationship);
+				queryString.append('area', area);
+				queryString.append('setting', setting);
+				barriers.forEach((question_concern) => {
+    				queryString.append('question_concern[]', question_concern);
+				});
+				queryString.append('self_care', self_care);
+				queryString.append('basic_needs', basic_needs);
+				queryString.append('care_affect', care_affect);
+				if (neg_affect) {
+					neg_affect.forEach((affect) => {
+    				queryString.append('neg_affect[]', neg_affect);
+				});
+				}
+				condition.forEach((cond) => {
+					queryString.append('condition[]', cond);
+				});
+				information.forEach((info) => {
+					queryString.append('information[]', info);
+				});
+				gender.forEach((gen) => {
+					queryString.append('gender[]', gen);
+				});
+				queryString.append('care_giver_age', care_giver_age);
+				employment_status.forEach((status) => {
+					queryString.append('employment_status[]', status);
+				});
+				if (indigenous) {
+					queryString.append('indigenous', indigenous);
+				}
+				if (care_recipient_indigenous) {
+					queryString.append('care_recipient_indigenous', care_recipient_indigenous);
+				}
+				population_group.forEach((group) => {
+					queryString.append('population_group[]', group);
+				});
+
+
+
+			// Redirect to results page
+			window.location.href = `results.html?${queryString.toString()}`;
+		});
+
+	</script>
+</body>
+</html>

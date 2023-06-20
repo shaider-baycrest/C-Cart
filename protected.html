@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Protected Page</title>
+  <style>
+    /* Styling for the password input area */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .password-input {
+      text-align: center;
+    }
+
+    .password-input label {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .password-input input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+
+    .password-input button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      if (password === "yourpassword") {
+        window.location.href = "form.html"; // Redirect to form.html
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="password-input">
+    <label for="password">Password:</label>
+    <br>
+    <input type="password" id="password" />
+    <br>
+    <button onclick="checkPassword()">Submit</button>
+  </div>
+</body>
+</html>
+
+
