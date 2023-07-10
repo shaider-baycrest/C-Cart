@@ -11,26 +11,24 @@
 		<h1>C-CART</h1>
 	</section>
 	<section id="intro">
-		<p>Based off of your survey, here are a list of resources which may be of assistance. <b>Please remember this is a limited survey and to always reach out to professional help as needed.</b></p>
+		<p>Based on your responses, here are a list of resources which may be of assistance. <b>Please remember this is a limited survey and to always reach out to professional help as needed.</b></p>
 	</section>
 	<script>
 		const params = new URLSearchParams(window.location.search);
 		const province = params.get('province');
-
+		const living_setting = params.get('living_setting');
 		const age = params.get('age');
 		const veteran = params.get('veteran');
 		const registered = params.get('registered');
 		const mood = parseInt(params.get('mood'));
 		const relationship = params.get('relationship');
 		const area = params.get('area');
-		const setting = params.get('setting');
 		const self_care = parseInt(params.get('self_care'));
 		const basic_needs = parseInt(params.get('basic_needs'));
 		const care_affect = params.get('care_affect');
 		const care_giver_age = params.get('care_giver_age');
 		const indigenous = params.get('indigenous');
 		const care_recipient_indigenous = params.get('care_recipient_indigenous');
-
 		const barriers = params.getAll('barriers[]');
 		const question_concern = params.getAll('question_concern[]');
 		const neg_affect = params.getAll('neg_affect[]');
@@ -488,11 +486,11 @@
 				document.write('<a href="' + 'https://ontariocaregiver.ca/for-caregivers/health-conditions/im-caring-for-someone-with-dementia-or-alzheimers-disease/' + '">' + "OCO caregiver supports" + '   </a><br>');
 				document.write('<a href="' + 'https://alzheimer.ca/en/help-support/im-caring-person-living-dementia' + '">' + "caregiver supports (Alzheimer's Society)" + '   </a><br>');
 				document.write('<a href="' + 'https://www.baycrest.org/Baycrest/Coming-to-Baycrest/For-Family-Caregivers' + '">' + "Baycrest: for family caregivers" + '   </a><br>');
+				flag7 = false;
 				if(indigenous.includes('Yes')) {
 					document.write('<a href="' + 'https://www.i-caare.ca/' + '">' + "I-CAARE: Indigenous cognition and aging research exchange" + '</a><br>');
 				}
-				flag7 = false;
-			}
+				}
 
 			if (condition.some(conditions => conditions.includes('Autism'))) {
 				if (province.includes('British Columbia')) {
@@ -541,7 +539,7 @@
 				}
 			}
 
-			if (conditions.some(condition => condition.includes('Parkinson'))) {
+			if (condition.some(conditions => conditions.includes('Parkinson'))) {
 				document.write('<a href="' + 'https://www.parkinson.ca/' + '">' + 'Parkinsons canada: landing page' + '</a><br>');
 				document.write('<a href="' + 'https://www.parkinson.ca/about-Parkinsons/care-partnering/' + '">' + 'Parkinsons canada: care partnering' + '</a><br>');
 				document.write('<a href="' + 'https://www.parkinson.ca/programs-near-you/?address%5B0%5D&post%5B0%5D=support-groups&distance=200&units=imperial&per_page=150&lat&lng&form=1' + '">' + 'Parkinsons canada: program locator' + '</a><br>');
@@ -549,12 +547,12 @@
 				flag7=false;
 			}
 
-			if (conditions.some(condition => condition.includes('ALS (Amyotrophic lateral sclerosis)'))) {
+			if (condition.some(conditions => conditions.includes('ALS (Amyotrophic lateral sclerosis)'))) {
 				document.write('<a href="' + 'https://als.ca/' + '">' + 'ALS society canada: landing page' + '</a><br>');
 				flag7=false;
 			}
 
-			if (conditions.some(condition => condition.includes('Stroke'))) {
+			if (condition.some(conditions => conditions.includes('Stroke'))) {
 				document.write('<a href="' + 'https://www.heartandstroke.ca/' + '">' + 'Heart and Stroke canada: landing page' + '</a><br>');
 				document.write('<a href="' + 'https://www.heartandstroke.ca/what-we-do/indigenous-health' + '">' + 'Heart and Stroke canada: indigenous supports' + '</a><br>');
 				document.write('<a href="' + 'https://www.heartandstroke.ca/services-and-resources/caregiver-support' + '">' + 'Heart and Stroke canada: caregiver resources' + '</a><br>');
@@ -562,7 +560,7 @@
 				flag7=false;
 			}
 
-			if (conditions.some(condition => condition.includes('MS'))) {
+			if (condition.some(conditions => conditions.includes('MS'))) {
 				document.write('<a href="' + 'https://mssociety.ca/' + '">' + 'MS society canada: landing page' + '</a><br>');
 				document.write('<a href="' + 'https://mssociety.ca/support-services/ms-knowledge-network' + '">' + 'MS society canada: ms knowledge network' + '</a><br>');
 				document.write('<a href="' + 'https://mssociety.ca/library/document/kGfVK4nQugmWzIiCalqo85Z6SThYLEjU/original.pdf' + '">' + 'MS society canada: caregiving guide' + '</a><br>');
@@ -571,153 +569,153 @@
 				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Brain Injury'))) {
+			if (condition.some(conditions => conditions.includes('Brain Injury'))) {
 				document.write('<a href="' + 'https://braininjurycanadaconnect.ca/?gclid=Cj0KCQiAorKfBhC0ARIsAHDzslvezRSCNfGkqU7d7_Z8BHhChtR3RKMR2VI720pgJ0NX78gZ0eSCUTIaAk1bEALw_wcB' + '">' + 'brain injury canada connect' + '</a><br>');
 				document.write('<a href="' + 'https://braininjurycanada.ca/en/caregiver/' + '">' + 'brain injury canada: caregiver supports' + '</a><br>');
 				
 				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Muscular distrophy'))) {
+			if (condition.some(conditions => conditions.includes('Muscular distrophy'))) {
 			document.write('<a href="' + 'https://muscle.ca/services-support/' + '">' + 'Muscular dystrophy canada: services and supports' + '</a><br>');
 			document.write('<a href="' + 'https://muscle.ca/' + '">' + 'Muscular dystrophy canada: landing page' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Frailty'))) {
+			if (condition.some(conditions => conditions.includes('Frailty'))) {
 			document.write('<a href="' + 'https://www.cfn-nce.ca/frailty-matters/what-is-frailty/' + '">' + 'canadian frailty network' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Depression') || condition.includes('Bipolar'))) {
+			if (condition.some(conditions => conditions.includes('Depression') || conditions.includes('Bipolar'))) {
 			document.write('<a href="' + 'https://mdsc.ca/' + '">' + 'mood disorder society of canada' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
 
-			if (conditions.some(condition => condition.includes('Depression') || condition.includes('Bipolar') || condition.includes('Anxiety') || condition.includes('Schizophrenia') || condition.includes('Eating disorders') || condition.includes('Addiction/Substance'))) {
+			if (condition.some(conditions => conditions.includes('Depression') || conditions.includes('Bipolar') || conditions.includes('Anxiety') || conditions.includes('Schizophrenia') || conditions.includes('Eating disorders') || conditions.includes('Addiction/Substance'))) {
 			document.write('<a href="' + 'https://mentalhealthcommission.ca/caregiver-resources/' + '">' + 'mental health commission of canada: caregiver resources' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
 
-			if (conditions.some(condition => condition.includes('Anxiety'))) {
+			if (condition.some(conditions => conditions.includes('Anxiety'))) {
 			document.write('<a href="' + 'https://www.anxietycanada.com/' + '">' + 'anxiety canada: landing page' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Schizophrenia'))) {
+			if (condition.some(conditions => conditions.includes('Schizophrenia'))) {
 			document.write('<a href="' + 'https://schizophrenia.ca/' + '">' + 'schizophrenia society of canada: landing page' + '</a><br>');
 			document.write('<a href="' + 'https://schizophrenia.ca/wp-content/uploads/2022/10/SSC-Advocacy-Tooklit_finale.pdf' + '">' + 'schizophrenia society of canada: advocacy toolkit' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('PTSD'))) {
+			if (condition.some(conditions => conditions.includes('PTSD'))) {
 			document.write('<a href="' + 'http://www.ptsdassociation.com/' + '">' + 'ptsd association of canada: landing page' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Eating disorders'))) {
+			if (condition.some(conditions => conditions.includes('Eating disorders'))) {
 			document.write('<a href="' + 'https://nedic.ca/' + '">' + 'national eating disorder information centre (nedic): landing page' + '</a><br>');
 			document.write('<a href="' + 'https://nedic.ca/community-groups/' + '">' + 'national eating disorder information centre (nedic): find a community group' + '</a><br>');
 			document.write('<a href="' + 'https://nedic.ca/resources/' + '">' + 'national eating disorder information centre (nedic): resources' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Addiction/Substance'))) {
+			if (condition.some(conditions => conditions.includes('Addiction/Substance'))) {
 			document.write('<a href="' + 'https://www.farcanada.org/' + '">' + 'families for addiction recovery canada' + '</a><br>');
 			document.write('<a href="' + 'https://ontario.cmha.ca/addictions/' + '">' + 'CMHA- Addictions' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Down syndrome'))) {
+			if (condition.some(conditions => conditions.includes('Down syndrome'))) {
 			document.write('<a href="' + 'https://cdss.ca/' + '">' + 'canadian down syndrome society: landing page' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Autism'))) {
+			if (condition.some(conditions => conditions.includes('Autism'))) {
 			document.write('<a href="' + 'Autism canada website' + '">' + 'autism canada' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('FASD'))) {
+			if (condition.some(conditions => conditions.includes('FASD'))) {
 			document.write('<a href="' + 'https://canfasd.ca/' + '">' + 'canadian FASD research network: landing page' + '</a><br>');
 			document.write('<a href="' + 'https://canfasd.ca/caregivers/information-for-caregivers/' + '">' + 'canadian FASD research network: information for cg' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('developmental disability'))) {
+			if (condition.some(conditions => conditions.includes('developmental disability'))) {
 			document.write('<a href="' + 'https://ontariocaregiver.ca/for-caregivers/health-conditions/im-caring-for-someone-with-a-neurodevelopmental-disability/' + '">' + 'OCO cg resources' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Vision loss'))) {
+			if (condition.some(conditions => conditions.includes('Vision loss'))) {
 			document.write('<a href="' + 'https://www.cnib.ca/en' + '">' + 'CNIB website (sorts by region)' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Hearing loss'))) {
+			if (condition.some(conditions => conditions.includes('Hearing loss'))) {
 			document.write('<a href="' + 'https://www.chha.ca/' + '">' + 'canadian hard of hearing association: landing page' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Mobility issues/fall risks'))) {
+			if (condition.some(conditions => conditions.includes('Mobility issues/fall risks'))) {
 			document.write('<a href="' + 'http://canadianfallprevention.ca/resources-and-links/' + '">' + 'canadian fall prevention: resources and links' + '</a><br>');
 			if (province.includes('Ontario')) {
 				document.write('<a href="' + 'https://ontariocaregiver.ca/for-caregivers/health-conditions/im-caring-for-someone-with-mobility-issues/' + '">' + 'OCO cg resources' + '</a><br>');
 			}
-			flag7 = false;
+				flag7 = false;
 			}
 
 
-			if (conditions.some(condition => condition.includes('Cancer'))) {
+			if (condition.some(conditions => conditions.includes('Cancer'))) {
 			document.write('<a href="' + 'https://csl.cancer.ca/en?_gl=1*1m5q1ra*_ga*MTM0NTQxOTQyMS4xNjc1NDQxNzYw*_ga_23YMKBE2C3*MTY3NjQ3NzEyMi41LjAuMTY3NjQ3NzEyMi42MC4wLjA.' + '">' + 'canadian cancer society: community services locator canada' + '</a><br>');
 			document.write('<a href="' + 'https://cancer.ca/en/living-with-cancer/helping-someone-with-cancer/caregiving' + '">' + 'canadian cancer society: caregiving resources' + '</a><br>');
 			document.write('<a href="' + 'https://cancer.ca/en/' + '">' + 'canadian cancer society: landing page' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Diabetes'))) {
+			if (condition.some(conditions => conditions.includes('Diabetes'))) {
 			document.write('<a href="' + 'https://www.diabetes.ca/' + '">' + 'diabetes canada: landing page' + '</a><br>');
 			document.write('<a href="' + 'https://www.diabetes.ca/resources' + '">' + 'diabetes canada: resources' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Cerebral palsy'))) {
+			if (condition.some(conditions => conditions.includes('Cerebral palsy'))) {
 				if (province.includes('Ontario')) {
 					document.write('<a href="' + 'https://www.ofcp.ca/' + '">' + 'ontario federation for cerebral palsy' + '</a><br>');
 				}
 			document.write('<a href="' + 'https://www.cpcanadanetwork.com/' + '">' + 'cerebral palsy canada network' + '</a><br>');
 			document.write('<a href="' + 'https://cprn.org/' + '">' + 'cerebral palsy research network' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Cystic fibrosis'))) {
+			if (condition.some(conditions => conditions.includes('Cystic fibrosis'))) {
 			document.write('<a href="' + 'https://www.cysticfibrosis.ca/about-cf/covid-19-information-for-cf-community/caregiver-resources' + '">' + 'cystic fibrosis: caregiver resources' + '</a><br>');
 			document.write('<a href="' + 'https://www.cysticfibrosis.ca/our-programs/healthcare/how-cf-care-is-delivered/cf-clinics-in-canada' + '">' + 'cystic fibrosis: find a clinic' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Sickle cell'))) {
+			if (condition.some(conditions => conditions.includes('Sickle Cell'))) {
 				if (province.includes('Ontario')) {
 					document.write('<a href="' + 'https://sicklecellanemia.ca/' + '">' + 'sickle cell awareness group of ontario' + '</a><br>');
 			
@@ -726,26 +724,26 @@
 				
 			}
 
-			if (conditions.some(condition => condition.includes('Chronic pain'))) {
+			if (condition.some(conditions => conditions.includes('Chronic pain'))) {
 			document.write('<a href="' + 'https://www.canada.ca/en/public-health/services/diseases/chronic-pain.html' + '">' + 'canada public health: chronic pain resources' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Fibromyalgia'))) {
+			if (condition.some(conditions => conditions.includes('Fibromyalgia'))) {
 			document.write('<a href="' + 'https://fibrocanada.ca/en/' + '">' + 'fibromyalgia association canada: landing page' + '</a><br>');
 			document.write('<a href="' + 'https://fibrocanada.ca/en/resources/federal-programs-benefits-services/' + '">' + 'fibromyalgia association canada: federal programs benefits and services' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Covid'))) {
+			if (condition.some(conditions => conditions.includes('Covid'))) {
 			document.write('<a href="' + 'https://longcovidresourcescanada.ca/' + '">' + 'long covid resources canada' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('Arthritis'))) {
+			if (condition.some(conditions => conditions.includes('Arthritis'))) {
 			document.write('<a href="' + 'https://arthritis.ca/get-involved/participate/find-an-event-near-you' + '">' + 'arthritis society of canada: event finder' + '</a><br>');
 			document.write('<a href="' + 'https://arthritis.ca/support-education/navigating-through-arthritis' + '">' + 'arthritis society of canada: navigating care' + '</a><br>');
 			document.write('<a href="' + 'https://arthritis.ca/support-education/mental-health' + '">' + 'arthritis society of canada: mental health' + '</a><br>');
@@ -753,20 +751,19 @@
 			document.write('<a href="' + 'https://arthritis.ca/support-education' + '">' + 'arthritis society of canada' + '</a><br>');
 			document.write('<a href="' + 'https://arthritis.ca/' + '">' + 'arthritis society of canada' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('COPD'))) {
-			document.write('<a href="' + 'https://lunghealth.ca/lung-disease/a-to-z/copd/?gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaXxSymlgVAhgu6OLiylKS0RA0DJOJ8j1AUm-_n49LfRgjeGXmAY-uUaAtmnEALw_wcB' + '">' + 'lung health foundation- COPD' + '</a><br>');
-			
-			flag7 = false;
+			if (condition.some(conditions => conditions.includes('COPD'))) {
+				document.write('<a href="' + 'https://lunghealth.ca/lung-disease/a-to-z/copd/?gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaXxSymlgVAhgu6OLiylKS0RA0DJOJ8j1AUm-_n49LfRgjeGXmAY-uUaAtmnEALw_wcB' + '">' + 'lung health foundation- COPD' + '</a><br>');
+				flag7 = false;
 			}
 
-			if (conditions.some(condition => condition.includes('ADHD'))) {
+			if (condition.some(conditions => conditions.includes('ADHD'))) {
 			document.write('<a href="' + 'https://caddac.ca/programs-and-events/#adhd-resource-navigator' + '">' + 'centre for ADHD awareness canada- resource navigator' + '</a><br>');
 			document.write('<a href="' + 'https://caddac.ca/find-a-resource/' + '">' + 'centre for ADHD awareness canada- resource location' + '</a><br>');
 			
-			flag7 = false;
+				flag7 = false;
 			}
 	
 
@@ -777,24 +774,24 @@
 		</script>
 	</fieldset>
 
-	<fieldset id="veteranFieldset">
+<!-- 	<fieldset id="veteranFieldset">
 		<legend>Resources for Veterans</legend>
 		<script>
 
 			let flag8 = true;
 
-			if (registered.includes('No')) {
+			if (veteran.includes('yes') && registered.includes('no')) {
 				document.write('<a href="' + 'https://www.veterans.gc.ca/eng/services' + '">' + 'Registering with veteran affairs' + '</a><br>');
 				flag8 = false;
 			}
 
 			if (information.some(info => info.includes('Advance care planning'))){
 				document.write('<a href="' + 'https://www.advancecareplanning.ca/' + '">' + 'Advance Care Planning' + '</a><br>');
+				flag8 = false;
 				if(indigenous.includes('Yes')) {
 					document.write('<a href="' + 'https://www.advancecareplanning.ca/resource/first-nations-acp-resources/' + '">' + "Indigenous specific Advance Care Planning resources" + '</a><br>');
 				}
 
-				flag8 = false;
 			}
 	
 			//FINISH HERE
@@ -802,7 +799,44 @@
 				document.getElementById('veteranFieldset').style.display = 'none';
 			}
 		</script>
+	</fieldset> -->
+
+	<fieldset id="veteranFieldset">
+		<legend>Resources for Veterans</legend>
+		<div id="resourcesContainer"></div>
+		<script>
+			let flag8 = true;
+	
+			// Make sure to define and assign appropriate values to the variables used in the conditional statements
+	
+			if (veteran.includes('yes') && registered.includes('no')) {
+				appendResourceLink('https://www.veterans.gc.ca/eng/services', 'Registering with veteran affairs');
+				flag8 = false;
+			}
+	
+			if (information.some(info => info.includes('Advance care planning'))) {
+				appendResourceLink('https://www.advancecareplanning.ca/', 'Advance Care Planning');
+				flag8 = false;
+				if (indigenous.includes('Yes')) {
+					appendResourceLink('https://www.advancecareplanning.ca/resource/first-nations-acp-resources/', 'Indigenous specific Advance Care Planning resources');
+				}
+			}
+	
+			if (flag8) {
+				document.getElementById('veteranFieldset').style.display = 'none';
+			}
+	
+			function appendResourceLink(url, label) {
+				const link = document.createElement('a');
+				link.href = url;
+				link.textContent = label;
+				link.target = '_blank';
+				document.getElementById('resourcesContainer').appendChild(link);
+				document.getElementById('resourcesContainer').appendChild(document.createElement('br'));
+			}
+		</script>
 	</fieldset>
+	
 
 	<fieldset id="communityCareFieldset">
 		<legend>Provinical home and community care </legend>
@@ -940,14 +974,14 @@
 
 
 	<fieldset id="moodFieldset">
-		<legend>Medical condition related resources</legend>
+		<legend>Mental health related resources</legend>
 		<script>
 
 			let flag5 = true;
 
 			if (mood >= 2) {
-				document.write('<a href="' + 'https://www.canada.ca/en/public-health/services/chronic-diseases/mental-illness/what-help-myself-feel-depressed.html ' + '">GOVT OF CANADA what to do if depressed' + '</a><br>' + 
-				'You have reported having low mood, this tool is not a diagnostic tool, therefore, it is recommneded that individuals discuss lower mood feelings with their family physician"<br>');
+				document.write('You have reported having low mood, this tool is not a diagnostic tool, therefore, it is recommneded that individuals discuss lower mood feelings with their family physician<br><br>'+
+				'<a href="' + 'https://www.canada.ca/en/public-health/services/chronic-diseases/mental-illness/what-help-myself-feel-depressed.html ' + '">What to do if depressed' + '</a><br>');
 				document.write('<a href="' + 'https://www.cma.ca/physician-wellness-hub/topics/depression' + '">CMHA depression</a><br>');
 				flag5 = false;
 			}
@@ -957,6 +991,26 @@
 			if (flag5) {
 				document.getElementById('moodFieldset').style.display = 'none';
 			}
+		</script>
+	</fieldset>
+
+	<fieldset id="eduResourceFieldset">
+		<legend>Educational Resource</legend>
+		<script>
+
+			flag9=true;
+
+			if (barriers.length > 0) {
+				document.write('<a href="' + 'http://general.baycrest.org/caregiver-mod3/story.html' + '">Training Module-How to seek help </a><br>');
+				flag9=false;
+			}
+
+
+			//FINISH HERE
+			if (flag9) {
+				document.getElementById('eduResourceFieldset').style.display = 'none';
+			}
+
 		</script>
 	</fieldset>
 	
