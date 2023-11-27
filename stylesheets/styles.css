@@ -225,17 +225,6 @@ select {
 	display: none;
 }
 
-#submitButton {
-	background-color: #41c4dc;
-	/*#4CAF50*/
-	color: white;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	font-size: 18px;
-	cursor: pointer;
-}
-
 
 
 button[type="submit"] {
