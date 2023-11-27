@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Results</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
 
 </head>
+
 <body>
 	<section id="header">
-		<img src="logo_baycrest.svg" alt="logo"> 
+		<img src="images/colour-negative.png" alt="logo">
 		<h1>C-CART</h1>
 	</section>
 	<section id="intro">
-		<p>Based on your responses, here are a list of resources which may be of assistance. <b>Please remember this is a limited survey and to always reach out to professional help as needed.</b></p>
+		<p>Based on your responses, here are a list of resources which may be of assistance. <b>Please remember the
+				resources provided are for information purposes only and it is not legal, medical, financial or other
+				professional advice.</b></p>
 	</section>
 	<script>
 		const params = new URLSearchParams(window.location.search);
@@ -47,7 +51,7 @@
 
 			const provinceLinks_211 = {
 				'Alberta': 'https://ab.211.ca/how-we-help/contact/',
-				'British Columbia': 'https://bc211.ca/contact-us',
+				'British Columbia': 'https://bc.211.ca/contact-us',
 				'Manitoba': 'https://mb.211.ca/contact-211/',
 				'New Brunswick': 'https://nb.211.ca/',
 				'Newfoundland and Labrador': 'https://nl.211.ca/',
@@ -72,26 +76,26 @@
 		<script>
 
 			const provinceLinks_811 = {
-					'Alberta': 'https://www.albertahealthservices.ca/findhealth/service.aspx?Id=1001957&facilityId=1011654',
-					'British Columbia': 'https://www.healthlinkbc.ca/more/about-healthlink-bc/about-8-1-1',
-					'Manitoba': 'Winnipeg Only: 204-788-8200<br>Rest of Manitoba: 1-888-315-9257<br>',
-					'New Brunswick': 'https://www2.gnb.ca/content/gnb/en/departments/health/Tele-Care.html',
-					'Newfoundland and Labrador': 'https://www.811healthline.ca/',
-					'Northwest Territories': 'https://www.hss.gov.nt.ca/en/services/811',
-					'Nova Scotia': 'https://811.novascotia.ca/',
-					'Nunavut': '1-867-975-5772\n',
-					'Ontario': 'https://healthconnectontario.health.gov.on.ca/static/guest/home',
-					'Prince Edward Island': 'https://www.princeedwardisland.ca/en/information/health-and-wellness/811-telehealth',
-					'Quebec': 'https://www.quebec.ca/en/health/finding-a-resource/info-sante-811',
-					'Saskatchewan': 'https://www.saskatchewan.ca/residents/health/accessing-health-care-services/healthline',
-					'Yukon': 'https://yukon.ca/en/health-and-wellness/care-services/access-24-hour-health-advice-811'
-				};
+				'Alberta': 'https://www.albertahealthservices.ca/findhealth/service.aspx?Id=1001957&facilityId=1011654',
+				'British Columbia': 'https://www.healthlinkbc.ca/more/about-healthlink-bc/about-8-1-1',
+				'Manitoba': 'Winnipeg Only: 204-788-8200<br>Rest of Manitoba: 1-888-315-9257<br>',
+				'New Brunswick': 'https://www2.gnb.ca/content/gnb/en/departments/health/Tele-Care.html',
+				'Newfoundland and Labrador': 'https://www.811healthline.ca/',
+				'Northwest Territories': 'https://www.hss.gov.nt.ca/en/services/811',
+				'Nova Scotia': 'https://811.novascotia.ca/',
+				'Nunavut': '1-867-975-5772\n',
+				'Ontario': 'https://healthconnectontario.health.gov.on.ca/static/guest/home',
+				'Prince Edward Island': 'https://www.princeedwardisland.ca/en/information/health-and-wellness/811-telehealth',
+				'Quebec': 'https://www.quebec.ca/en/health/finding-a-resource/info-sante-811',
+				'Saskatchewan': 'https://www.saskatchewan.ca/residents/health/accessing-health-care-services/healthline',
+				'Yukon': 'https://yukon.ca/en/health-and-wellness/care-services/access-24-hour-health-advice-811'
+			};
 
-				if (province === 'Manitoba' || province === 'Nunavut') {
-					document.write(provinceLinks_811[province] + ' In Canada, 811 is a telephone service that provides free 24/7 nurse advice and general health information.');
-				} else {
-					document.write('<a href="' + provinceLinks_811[province] + '">811 - ' + province + '</a>: In Canada, 811 is a telephone service that provides free 24/7 nurse advice and general health information.');
-				}
+			if (province === 'Manitoba' || province === 'Nunavut') {
+				document.write(provinceLinks_811[province] + ' In Canada, 811 is a telephone service that provides free 24/7 nurse advice and general health information.');
+			} else {
+				document.write('<a href="' + provinceLinks_811[province] + '">811 - ' + province + '</a>: In Canada, 811 is a telephone service that provides free 24/7 nurse advice and general health information.');
+			}
 		</script>
 	</fieldset>
 
@@ -108,7 +112,7 @@
 				'Yukon': 'https://www.carerscanada.ca/',
 				'Nunavut': 'https://www.carerscanada.ca/'
 			};
-	
+
 			const caregiverOrgLinksFallback = {
 				'Alberta': {
 					'link': 'https://www.caregiversalberta.ca/programs-and-services/for-caregivers/',
@@ -131,7 +135,7 @@
 					'phone': 'Toll-free helpline: 1-855-852-7784<br>Helpline Number: 514-789-2460<br>Email: info@lappui.org'
 				}
 			};
-	
+
 			if (province in caregiverOrgLinks) {
 				document.write('<a href="' + caregiverOrgLinks[province] + '">' + 'Carers Canada' + '</a><br>');
 			} else if (province in caregiverOrgLinksFallback) {
@@ -167,7 +171,7 @@
 			const yukonSupportsForAdultsSeniorsLink = 'https://yukon.ca/en/legal-and-social-supports/supports-adults-and-seniors';
 
 			let flag = true;
-	
+
 			if (age.includes('65') && (barriers.some(barrier => barrier.includes('Financial reasons')) || basic_needs >= 1)) {
 				document.write('<a href="' + cppLink + '">' + 'Canada Pension Plan' + '</a><br>');
 				document.write('<a href="' + oldAgeSecurityLink + '">' + 'Old Age Security & Guaranteed Income Supplement' + '</a><br>');
@@ -176,53 +180,53 @@
 			} else if ((age.includes('18') && (barriers.some(barrier => barrier.includes('Financial reasons')) || basic_needs >= 1))) {
 				document.write('<a href="' + cppDisabilityLink + '">' + 'Canada Pension Plan - Disability' + '</a><br>');
 				flag = false;
-			} 
-			
-			if (barriers.some(barrier => barrier.includes('Financial reasons')) && ((barriers.some(barrier => barrier.includes('Unsure where to find'))||barriers.some(barrier => barrier.includes('help is not available'))||barriers.some(barrier => barrier.includes('what services exist')))) ) {
+			}
+
+			if (barriers.some(barrier => barrier.includes('Financial reasons')) && ((barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist'))))) {
 				document.write('<a href="' + governmentBenefitsFinderLink + '">' + 'Government of Canada  – Benefits Finder Tool' + '</a><br>');
 				flag = false;
 			}
 
 			if (province.includes('Alberta') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + myAlbertaSupportsLink + '">' + 'MyAlbertaSupports – Provincial Benefits Online Portal: Online Self-Assessment' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + myAlbertaSupportsLink + '">' + 'MyAlbertaSupports – Provincial Benefits Online Portal: Online Self-Assessment' + '</a><br>');
+				flag = false;
 			} else if (province.includes('British Columbia') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + britishColumbiaMySelfServeLink + '">' + 'British Columbia MySelfServe – Provincial Benefits Online Portal: Eligibility Estimator' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + britishColumbiaMySelfServeLink + '">' + 'British Columbia MySelfServe – Provincial Benefits Online Portal: Eligibility Estimator' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Manitoba') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + manitobaResourcesFinderLink + '">' + 'Manitoba – Ministry Resources Finder' + '</a>' +
-			': Instructions: (1) Go to “Select ‘I am’”, (2) Open drop-down menu and select “I am a caregiver”, (3) click “Go” <br>');
-			flag = false;
+				document.write('<a href="' + manitobaResourcesFinderLink + '">' + 'Manitoba – Ministry Resources Finder' + '</a>' +
+					': Instructions: (1) Go to “Select ‘I am’”, (2) Open drop-down menu and select “I am a caregiver”, (3) click “Go” <br>');
+				flag = false;
 			} else if (province.includes('New Brunswick') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + newBrunswickSocialSupportsLink + '">' + 'New Brunswick – Social Supports NB (Department of Social Development): Programs & Services Finder' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + newBrunswickSocialSupportsLink + '">' + 'New Brunswick – Social Supports NB (Department of Social Development): Programs & Services Finder' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Newfoundland and Labrador') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + newfoundlandLabradorLink + '">' + 'Newfoundland and Labrador – Ministry of Children, Seniors, & Social Development Page' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + newfoundlandLabradorLink + '">' + 'Newfoundland and Labrador – Ministry of Children, Seniors, & Social Development Page' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Northwest Territories') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + northwestTerritoriesCommunityProgramsLink + '">' + 'Northwest Territories – Community Programs Page' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + northwestTerritoriesCommunityProgramsLink + '">' + 'Northwest Territories – Community Programs Page' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Nova Scotia') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + novaScotiaProvincialBenefitsLink + '">' + 'Nova Scotia – General Provincial Benefits Page' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + novaScotiaProvincialBenefitsLink + '">' + 'Nova Scotia – General Provincial Benefits Page' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Nunavut') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + nunavutIncomeAssistanceLink + '">' + 'Nunavut – Income Assistance Page' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + nunavutIncomeAssistanceLink + '">' + 'Nunavut – Income Assistance Page' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Ontario') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + ontarioFinancialBenefitsFinderLink + '">' + 'Ontario – Financial Benefits Finder' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + ontarioFinancialBenefitsFinderLink + '">' + 'Ontario – Financial Benefits Finder' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Prince Edward Island') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + princeEdwardIslandProvincialBenefitsLink + '">' + 'Prince Edward Island – General Provincial Benefits Page' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + princeEdwardIslandProvincialBenefitsLink + '">' + 'Prince Edward Island – General Provincial Benefits Page' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Quebec') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + quebecSupportsForCaregiversLink + '">' + 'Quebec – Supports for Informal & Family Caregivers Page' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + quebecSupportsForCaregiversLink + '">' + 'Quebec – Supports for Informal & Family Caregivers Page' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Saskatchewan') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + saskatchewanFamilySocialSupportLink + '">' + 'Saskatchewan – Family & Social Support Page' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + saskatchewanFamilySocialSupportLink + '">' + 'Saskatchewan – Family & Social Support Page' + '</a><br>');
+				flag = false;
 			} else if (province.includes('Yukon') && barriers.some(barrier => barrier.includes('Financial reasons')) && (barriers.some(barrier => barrier.includes('Unsure where to find')) || barriers.some(barrier => barrier.includes('help is not available')) || barriers.some(barrier => barrier.includes('what services exist')))) {
-			document.write('<a href="' + yukonSupportsForAdultsSeniorsLink + '">' + 'Yukon – Supports for Adults & Seniors' + '</a><br>');
-			flag = false;
+				document.write('<a href="' + yukonSupportsForAdultsSeniorsLink + '">' + 'Yukon – Supports for Adults & Seniors' + '</a><br>');
+				flag = false;
 			}
 
 			const ABHomeReno = 'https://www.alberta.ca/residential-access-modification-program.aspx';
@@ -303,37 +307,37 @@
 			}
 
 
-			if (care_affect.includes('yes') && ((basic_needs>=1) ||barriers.some(barrier => barrier.includes('Financial reasons')))){
+			if (care_affect.includes('yes') && ((basic_needs >= 1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
 				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/campaigns/free-tax-help.html' + '">' + 'Free Tax Clinics  – Government of Canada' + '</a><br>');
 				document.write('<a href="' + 'https://www.canada.ca/en/services/benefits/ei/caregiving.html' + '">' + 'EI Care Benefit' + '</a><br>');
 
 				flag = false;
 			}
 
-			if (age.includes('17') && relationship.includes('child') && ((basic_needs>=1) || barriers.some(barrier => barrier.includes('Financial reasons')))){
+			if (age.includes('17') && relationship.includes('child') && ((basic_needs >= 1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
 				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/child-family-benefits/child-disability-benefit.html' + '">' + 'Child Disability Benefit (CDB)' + '</a><br>');
 				flag = false;
 			}
 
-			if (veteran.includes('yes') && ((basic_needs>=1) || barriers.some(barrier => barrier.includes('Financial reasons')))){
+			if (veteran.includes('yes') && ((basic_needs >= 1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
 				document.write('<a href="' + 'https://www.veterans.gc.ca/eng/housing-and-home-life/help-at-home/caregiver-recognition-benefit' + '">' + 'Caregiver Recognition Benefit: Veterans Affairs Canada' + '</a><br>');
 				flag = false;
 			}
 
-			if (!province.includes('Quebec') && ((basic_needs>=1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
+			if (!province.includes('Quebec') && ((basic_needs >= 1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
 				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/canada-caregiver-amount.html' + '">' + 'Canada Caregiver Credit' + '</a><br>');
 				document.write('<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/lines-33099-33199-eligible-medical-expenses-you-claim-on-your-tax-return.html">Medical Expenses Tax Credit</a><br>');
 				document.write('<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities/disability-tax-credit.html">Disability Tax Credit</a><br>');
 				flag = false;
 			}
 
-			if (province.includes('Nova') && ((basic_needs>=1) || barriers.some(barrier => barrier.includes('Financial reasons')) || care_affect.includes('Yes'))) {
+			if (province.includes('Nova') && ((basic_needs >= 1) || barriers.some(barrier => barrier.includes('Financial reasons')) || care_affect.includes('Yes'))) {
 				document.write('<a href="' + 'https://novascotia.ca/dhw/ccs/caregiver-benefit.asp#' + '">' + 'Nova Scotia - Caregivers Benefit' + '</a><br>');
 				document.write('<a> 1-800-225-7225 </a><br>');
 				flag = false;
 			}
 
-			if (age.includes('17') && relationship.includes('child') && province.includes('Quebec') && ((basic_needs>=1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
+			if (age.includes('17') && relationship.includes('child') && province.includes('Quebec') && ((basic_needs >= 1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
 				document.write('<a href="' + 'https://www.rrq.gouv.qc.ca/en/programmes/soutien_enfants/supplement/Pages/supplement.aspx#' + '">' + 'Quebec - Family Allowance: Supplement for Handicapped Children' + '   </a><br>');
 				document.write('<a href="' + 'https://www.rrq.gouv.qc.ca/en/enfants/enfant_handicape/seh-necessitant-soins-exceptionnels/Pages/seh-necessitant-soins-exceptionnels.aspx#' + '">' + 'Quebec - Supplement for Handicapped Children Requiring Exceptional Care' + '   </a><br>');
 				flag = false;
@@ -345,64 +349,64 @@
 			}
 
 			if (province.includes('British Columbia') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/british-columbia/5010-pc/information-residents-british-columbia.html#' + '">' + 'British Columbia Caregiver Amount: Tax Credit' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/british-columbia/5010-pc/information-residents-british-columbia.html#' + '">' + 'British Columbia Caregiver Amount: Tax Credit' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Manitoba') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/manitoba/5007-pc/information-residents-manitoba.html#' + '">' + 'Manitoba – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/manitoba/5007-pc/information-residents-manitoba.html#' + '">' + 'Manitoba – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('New Brunswick') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/new-brunswick/5004-pc/information-residents-new-brunswick.html#' + '">' + 'New Brunswick – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/new-brunswick/5004-pc/information-residents-new-brunswick.html#' + '">' + 'New Brunswick – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Newfoundland and Labrador') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/newfoundland-labrador/5001-pc/information-residents-newfoundland-labrador.html#' + '">' + 'Newfoundland & Labrador – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/newfoundland-labrador/5001-pc/information-residents-newfoundland-labrador.html#' + '">' + 'Newfoundland & Labrador – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Northwest Territories') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/northwest-territories/5012-pc/information-residents-northwest-territories.html#' + '">' + 'Northwest Territories – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/northwest-territories/5012-pc/information-residents-northwest-territories.html#' + '">' + 'Northwest Territories – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Nova Scotia') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/nova-scotia/5003-pc/information-residents-nova-scotia.html#' + '">' + 'Nova Scotia – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/nova-scotia/5003-pc/information-residents-nova-scotia.html#' + '">' + 'Nova Scotia – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Nunavut') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/provincial-territorial-tax-credits-individuals/nunavut.html#' + '">' + 'Nunavut – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/provincial-territorial-tax-credits-individuals/nunavut.html#' + '">' + 'Nunavut – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Ontario') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/ontario/5006-pc/information-residents-ontario.html#' + '">' + 'Ontario Caregiver Amount: Tax Credit' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/ontario/5006-pc/information-residents-ontario.html#' + '">' + 'Ontario Caregiver Amount: Tax Credit' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Prince Edward Island') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/prince-edward-island/5002-pc/information-residents-prince-edward-island.html#' + '">' + 'Prince Edward Island – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/prince-edward-island/5002-pc/information-residents-prince-edward-island.html#' + '">' + 'Prince Edward Island – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Quebec') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.revenuquebec.ca/en/citizens/tax-credits/tax-credit-for-caregivers/#' + '">' + 'Quebec – Tax Credit for Caregivers' + '   </a><br>');
-			document.write('<a href="' + 'https://www.revenuquebec.ca/en/citizens/income-tax-return/completing-your-income-tax-return/how-to-complete-your-income-tax-return/line-by-line-help/451-to-480-refund-or-balance-due/line-462/point-2/#' + '">' + 'Quebec – Expenses Incurred for Specialized Respite Services Tax Credit' + '   </a><br>');
-			document.write('<a href="' + 'https://www.revenuquebec.ca/en/citizens/tax-credits/medical-expenses/#' + '">' + 'Quebec – Medical Expenses Tax Credit' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.revenuquebec.ca/en/citizens/tax-credits/tax-credit-for-caregivers/#' + '">' + 'Quebec – Tax Credit for Caregivers' + '   </a><br>');
+				document.write('<a href="' + 'https://www.revenuquebec.ca/en/citizens/income-tax-return/completing-your-income-tax-return/how-to-complete-your-income-tax-return/line-by-line-help/451-to-480-refund-or-balance-due/line-462/point-2/#' + '">' + 'Quebec – Expenses Incurred for Specialized Respite Services Tax Credit' + '   </a><br>');
+				document.write('<a href="' + 'https://www.revenuquebec.ca/en/citizens/tax-credits/medical-expenses/#' + '">' + 'Quebec – Medical Expenses Tax Credit' + '   </a><br>');
+				flag = false;
 			}
 
 			if (province.includes('Saskatchewan') && (basic_needs >= 1 || barriers.includes('Financial Reasons'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/saskatchewan/5008-pc/information-residents-saskatchewan.html#' + '">' + 'Saskatchewan – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
-			flag = false;
+				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/saskatchewan/5008-pc/information-residents-saskatchewan.html#' + '">' + 'Saskatchewan – Provincial Tax Credit: Caregiver Amount' + '   </a><br>');
+				flag = false;
 			}
 
-			
-			if (age.includes('17') && relationship.includes('child') && province.includes('Yukon') && ((basic_needs>=1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
+
+			if (age.includes('17') && relationship.includes('child') && province.includes('Yukon') && ((basic_needs >= 1) || barriers.some(barrier => barrier.includes('Financial reasons')))) {
 				document.write('<a href="' + 'https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/yukon/5011-pc/information-residents-yukon.html#' + '">' + 'Yukon – Caregiver amount for infirm children under 18 years of age' + '   </a><br>');
 				flag = false;
 			}
@@ -417,21 +421,21 @@
 		<legend>Finding a Family Physician Services</legend>
 		<script>
 
-		const doctorLinks = {
-			'Alberta': 'https://albertafindadoctor.ca/',
-			'British Columbia': 'https://bccfp.bc.ca/for-the-public/find-a-family-doctor/',
-			'Manitoba': 'https://www.gov.mb.ca/health/familydoctorfinder/',
-			'New Brunswick': 'https://www2.gnb.ca/content/gnb/en/departments/health/Hospital-Services/content/Patient_Connect_NB.html',
-			'Newfoundland and Labrador': 'https://patientconnect.nlchi.nl.ca/',
-			'Northwest Territories': 'https://www.nthssa.ca/en/regional-portals',
-			'Nova Scotia': 'https://needafamilypractice.nshealth.ca/',
-			'Nunavut': 'https://www.gov.nu.ca/health/information/health-centres',
-			'Ontario': 'https://www.health.gov.on.ca/en/ms/healthcareconnect/pro/',
-			'Prince Edward Island': 'https://www.princeedwardisland.ca/en/information/health-pei/patient-registry-program',
-			'Quebec': 'https://www.quebec.ca/en/health/finding-a-resource/quebec-family-doctor-finder',
-			'Saskatchewan': 'https://www.saskhealthauthority.ca/your-health/clinic-directory-area',
-			'Yukon': 'https://yukon.ca/find-doctor'
-		};
+			const doctorLinks = {
+				'Alberta': 'https://albertafindadoctor.ca/',
+				'British Columbia': 'https://bccfp.bc.ca/for-the-public/find-a-family-doctor/',
+				'Manitoba': 'https://www.gov.mb.ca/health/familydoctorfinder/',
+				'New Brunswick': 'https://www2.gnb.ca/content/gnb/en/departments/health/Hospital-Services/content/Patient_Connect_NB.html',
+				'Newfoundland and Labrador': 'https://patientconnect.nlchi.nl.ca/',
+				'Northwest Territories': 'https://www.nthssa.ca/en/regional-portals',
+				'Nova Scotia': 'https://needafamilypractice.nshealth.ca/',
+				'Nunavut': 'https://www.gov.nu.ca/health/information/health-centres',
+				'Ontario': 'https://www.health.gov.on.ca/en/ms/healthcareconnect/pro/',
+				'Prince Edward Island': 'https://www.princeedwardisland.ca/en/information/health-pei/patient-registry-program',
+				'Quebec': 'https://www.quebec.ca/en/health/finding-a-resource/quebec-family-doctor-finder',
+				'Saskatchewan': 'https://www.saskhealthauthority.ca/your-health/clinic-directory-area',
+				'Yukon': 'https://yukon.ca/find-doctor'
+			};
 
 			let flag2 = true;
 
@@ -439,7 +443,7 @@
 				document.write('<a href="' + doctorLinks[province] + '">Find a Family Physician in ' + province + '</a><br>');
 				flag2 = false;
 			}
-	
+
 
 			//FINISH HERE
 			if (flag2) {
@@ -464,7 +468,7 @@
 				document.write('<a href="' + 'https://www.connectedcanadians.ca/programs' + '">' + 'Tech Literacy Resource' + '   </a><br>');
 				flag6 = false;
 			}
-	
+
 
 			//FINISH HERE
 			if (flag6) {
@@ -487,10 +491,10 @@
 				document.write('<a href="' + 'https://alzheimer.ca/en/help-support/im-caring-person-living-dementia' + '">' + "caregiver supports (Alzheimer's Society)" + '   </a><br>');
 				document.write('<a href="' + 'https://www.baycrest.org/Baycrest/Coming-to-Baycrest/For-Family-Caregivers' + '">' + "Baycrest: for family caregivers" + '   </a><br>');
 				flag7 = false;
-				if(indigenous.includes('Yes')) {
+				if (indigenous.includes('Yes')) {
 					document.write('<a href="' + 'https://www.i-caare.ca/' + '">' + "I-CAARE: Indigenous cognition and aging research exchange" + '</a><br>');
 				}
-				}
+			}
 
 			if (condition.some(conditions => conditions.includes('Autism'))) {
 				if (province.includes('British Columbia')) {
@@ -544,12 +548,12 @@
 				document.write('<a href="' + 'https://www.parkinson.ca/about-Parkinsons/care-partnering/' + '">' + 'Parkinsons canada: care partnering' + '</a><br>');
 				document.write('<a href="' + 'https://www.parkinson.ca/programs-near-you/?address%5B0%5D&post%5B0%5D=support-groups&distance=200&units=imperial&per_page=150&lat&lng&form=1' + '">' + 'Parkinsons canada: program locator' + '</a><br>');
 				document.write('<a href="' + 'https://www.parkinson.ca/about-Parkinsons/living-with-Parkinsons/' + '">' + 'Parkinsons canada: general info and supports' + '</a><br>');
-				flag7=false;
+				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('ALS (Amyotrophic lateral sclerosis)'))) {
 				document.write('<a href="' + 'https://als.ca/' + '">' + 'ALS society canada: landing page' + '</a><br>');
-				flag7=false;
+				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Stroke'))) {
@@ -557,7 +561,7 @@
 				document.write('<a href="' + 'https://www.heartandstroke.ca/what-we-do/indigenous-health' + '">' + 'Heart and Stroke canada: indigenous supports' + '</a><br>');
 				document.write('<a href="' + 'https://www.heartandstroke.ca/services-and-resources/caregiver-support' + '">' + 'Heart and Stroke canada: caregiver resources' + '</a><br>');
 				document.write('<a href="' + 'https://www.heartandstroke.ca/heart-disease/recovery-and-support/the-power-of-community' + '">' + 'Heart and Stroke canada: community supports' + '</a><br>');
-				flag7=false;
+				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('MS'))) {
@@ -572,129 +576,129 @@
 			if (condition.some(conditions => conditions.includes('Brain Injury'))) {
 				document.write('<a href="' + 'https://braininjurycanadaconnect.ca/?gclid=Cj0KCQiAorKfBhC0ARIsAHDzslvezRSCNfGkqU7d7_Z8BHhChtR3RKMR2VI720pgJ0NX78gZ0eSCUTIaAk1bEALw_wcB' + '">' + 'brain injury canada connect' + '</a><br>');
 				document.write('<a href="' + 'https://braininjurycanada.ca/en/caregiver/' + '">' + 'brain injury canada: caregiver supports' + '</a><br>');
-				
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Muscular distrophy'))) {
-			document.write('<a href="' + 'https://muscle.ca/services-support/' + '">' + 'Muscular dystrophy canada: services and supports' + '</a><br>');
-			document.write('<a href="' + 'https://muscle.ca/' + '">' + 'Muscular dystrophy canada: landing page' + '</a><br>');
-			
+				document.write('<a href="' + 'https://muscle.ca/services-support/' + '">' + 'Muscular dystrophy canada: services and supports' + '</a><br>');
+				document.write('<a href="' + 'https://muscle.ca/' + '">' + 'Muscular dystrophy canada: landing page' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Frailty'))) {
-			document.write('<a href="' + 'https://www.cfn-nce.ca/frailty-matters/what-is-frailty/' + '">' + 'canadian frailty network' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.cfn-nce.ca/frailty-matters/what-is-frailty/' + '">' + 'canadian frailty network' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Depression') || conditions.includes('Bipolar'))) {
-			document.write('<a href="' + 'https://mdsc.ca/' + '">' + 'mood disorder society of canada' + '</a><br>');
-			
+				document.write('<a href="' + 'https://mdsc.ca/' + '">' + 'mood disorder society of canada' + '</a><br>');
+
 				flag7 = false;
 			}
 
 
 			if (condition.some(conditions => conditions.includes('Depression') || conditions.includes('Bipolar') || conditions.includes('Anxiety') || conditions.includes('Schizophrenia') || conditions.includes('Eating disorders') || conditions.includes('Addiction/Substance'))) {
-			document.write('<a href="' + 'https://mentalhealthcommission.ca/caregiver-resources/' + '">' + 'mental health commission of canada: caregiver resources' + '</a><br>');
-			
+				document.write('<a href="' + 'https://mentalhealthcommission.ca/caregiver-resources/' + '">' + 'mental health commission of canada: caregiver resources' + '</a><br>');
+
 				flag7 = false;
 			}
 
 
 			if (condition.some(conditions => conditions.includes('Anxiety'))) {
-			document.write('<a href="' + 'https://www.anxietycanada.com/' + '">' + 'anxiety canada: landing page' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.anxietycanada.com/' + '">' + 'anxiety canada: landing page' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Schizophrenia'))) {
-			document.write('<a href="' + 'https://schizophrenia.ca/' + '">' + 'schizophrenia society of canada: landing page' + '</a><br>');
-			document.write('<a href="' + 'https://schizophrenia.ca/wp-content/uploads/2022/10/SSC-Advocacy-Tooklit_finale.pdf' + '">' + 'schizophrenia society of canada: advocacy toolkit' + '</a><br>');
-			
+				document.write('<a href="' + 'https://schizophrenia.ca/' + '">' + 'schizophrenia society of canada: landing page' + '</a><br>');
+				document.write('<a href="' + 'https://schizophrenia.ca/wp-content/uploads/2022/10/SSC-Advocacy-Tooklit_finale.pdf' + '">' + 'schizophrenia society of canada: advocacy toolkit' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('PTSD'))) {
-			document.write('<a href="' + 'http://www.ptsdassociation.com/' + '">' + 'ptsd association of canada: landing page' + '</a><br>');
-			
+				document.write('<a href="' + 'http://www.ptsdassociation.com/' + '">' + 'ptsd association of canada: landing page' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Eating disorders'))) {
-			document.write('<a href="' + 'https://nedic.ca/' + '">' + 'national eating disorder information centre (nedic): landing page' + '</a><br>');
-			document.write('<a href="' + 'https://nedic.ca/community-groups/' + '">' + 'national eating disorder information centre (nedic): find a community group' + '</a><br>');
-			document.write('<a href="' + 'https://nedic.ca/resources/' + '">' + 'national eating disorder information centre (nedic): resources' + '</a><br>');
-			
+				document.write('<a href="' + 'https://nedic.ca/' + '">' + 'national eating disorder information centre (nedic): landing page' + '</a><br>');
+				document.write('<a href="' + 'https://nedic.ca/community-groups/' + '">' + 'national eating disorder information centre (nedic): find a community group' + '</a><br>');
+				document.write('<a href="' + 'https://nedic.ca/resources/' + '">' + 'national eating disorder information centre (nedic): resources' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Addiction/Substance'))) {
-			document.write('<a href="' + 'https://www.farcanada.org/' + '">' + 'families for addiction recovery canada' + '</a><br>');
-			document.write('<a href="' + 'https://ontario.cmha.ca/addictions/' + '">' + 'CMHA- Addictions' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.farcanada.org/' + '">' + 'families for addiction recovery canada' + '</a><br>');
+				document.write('<a href="' + 'https://ontario.cmha.ca/addictions/' + '">' + 'CMHA- Addictions' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Down syndrome'))) {
-			document.write('<a href="' + 'https://cdss.ca/' + '">' + 'canadian down syndrome society: landing page' + '</a><br>');
-			
+				document.write('<a href="' + 'https://cdss.ca/' + '">' + 'canadian down syndrome society: landing page' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Autism'))) {
-			document.write('<a href="' + 'Autism canada website' + '">' + 'autism canada' + '</a><br>');
-			
+				document.write('<a href="' + 'Autism canada website' + '">' + 'autism canada' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('FASD'))) {
-			document.write('<a href="' + 'https://canfasd.ca/' + '">' + 'canadian FASD research network: landing page' + '</a><br>');
-			document.write('<a href="' + 'https://canfasd.ca/caregivers/information-for-caregivers/' + '">' + 'canadian FASD research network: information for cg' + '</a><br>');
-			
+				document.write('<a href="' + 'https://canfasd.ca/' + '">' + 'canadian FASD research network: landing page' + '</a><br>');
+				document.write('<a href="' + 'https://canfasd.ca/caregivers/information-for-caregivers/' + '">' + 'canadian FASD research network: information for cg' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('developmental disability'))) {
-			document.write('<a href="' + 'https://ontariocaregiver.ca/for-caregivers/health-conditions/im-caring-for-someone-with-a-neurodevelopmental-disability/' + '">' + 'OCO cg resources' + '</a><br>');
-			
+				document.write('<a href="' + 'https://ontariocaregiver.ca/for-caregivers/health-conditions/im-caring-for-someone-with-a-neurodevelopmental-disability/' + '">' + 'OCO cg resources' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Vision loss'))) {
-			document.write('<a href="' + 'https://www.cnib.ca/en' + '">' + 'CNIB website (sorts by region)' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.cnib.ca/en' + '">' + 'CNIB website (sorts by region)' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Hearing loss'))) {
-			document.write('<a href="' + 'https://www.chha.ca/' + '">' + 'canadian hard of hearing association: landing page' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.chha.ca/' + '">' + 'canadian hard of hearing association: landing page' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Mobility issues/fall risks'))) {
-			document.write('<a href="' + 'http://canadianfallprevention.ca/resources-and-links/' + '">' + 'canadian fall prevention: resources and links' + '</a><br>');
-			if (province.includes('Ontario')) {
-				document.write('<a href="' + 'https://ontariocaregiver.ca/for-caregivers/health-conditions/im-caring-for-someone-with-mobility-issues/' + '">' + 'OCO cg resources' + '</a><br>');
-			}
+				document.write('<a href="' + 'http://canadianfallprevention.ca/resources-and-links/' + '">' + 'canadian fall prevention: resources and links' + '</a><br>');
+				if (province.includes('Ontario')) {
+					document.write('<a href="' + 'https://ontariocaregiver.ca/for-caregivers/health-conditions/im-caring-for-someone-with-mobility-issues/' + '">' + 'OCO cg resources' + '</a><br>');
+				}
 				flag7 = false;
 			}
 
 
 			if (condition.some(conditions => conditions.includes('Cancer'))) {
-			document.write('<a href="' + 'https://csl.cancer.ca/en?_gl=1*1m5q1ra*_ga*MTM0NTQxOTQyMS4xNjc1NDQxNzYw*_ga_23YMKBE2C3*MTY3NjQ3NzEyMi41LjAuMTY3NjQ3NzEyMi42MC4wLjA.' + '">' + 'canadian cancer society: community services locator canada' + '</a><br>');
-			document.write('<a href="' + 'https://cancer.ca/en/living-with-cancer/helping-someone-with-cancer/caregiving' + '">' + 'canadian cancer society: caregiving resources' + '</a><br>');
-			document.write('<a href="' + 'https://cancer.ca/en/' + '">' + 'canadian cancer society: landing page' + '</a><br>');
-			
+				document.write('<a href="' + 'https://csl.cancer.ca/en?_gl=1*1m5q1ra*_ga*MTM0NTQxOTQyMS4xNjc1NDQxNzYw*_ga_23YMKBE2C3*MTY3NjQ3NzEyMi41LjAuMTY3NjQ3NzEyMi42MC4wLjA.' + '">' + 'canadian cancer society: community services locator canada' + '</a><br>');
+				document.write('<a href="' + 'https://cancer.ca/en/living-with-cancer/helping-someone-with-cancer/caregiving' + '">' + 'canadian cancer society: caregiving resources' + '</a><br>');
+				document.write('<a href="' + 'https://cancer.ca/en/' + '">' + 'canadian cancer society: landing page' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Diabetes'))) {
-			document.write('<a href="' + 'https://www.diabetes.ca/' + '">' + 'diabetes canada: landing page' + '</a><br>');
-			document.write('<a href="' + 'https://www.diabetes.ca/resources' + '">' + 'diabetes canada: resources' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.diabetes.ca/' + '">' + 'diabetes canada: landing page' + '</a><br>');
+				document.write('<a href="' + 'https://www.diabetes.ca/resources' + '">' + 'diabetes canada: resources' + '</a><br>');
+
 				flag7 = false;
 			}
 
@@ -702,55 +706,55 @@
 				if (province.includes('Ontario')) {
 					document.write('<a href="' + 'https://www.ofcp.ca/' + '">' + 'ontario federation for cerebral palsy' + '</a><br>');
 				}
-			document.write('<a href="' + 'https://www.cpcanadanetwork.com/' + '">' + 'cerebral palsy canada network' + '</a><br>');
-			document.write('<a href="' + 'https://cprn.org/' + '">' + 'cerebral palsy research network' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.cpcanadanetwork.com/' + '">' + 'cerebral palsy canada network' + '</a><br>');
+				document.write('<a href="' + 'https://cprn.org/' + '">' + 'cerebral palsy research network' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Cystic fibrosis'))) {
-			document.write('<a href="' + 'https://www.cysticfibrosis.ca/about-cf/covid-19-information-for-cf-community/caregiver-resources' + '">' + 'cystic fibrosis: caregiver resources' + '</a><br>');
-			document.write('<a href="' + 'https://www.cysticfibrosis.ca/our-programs/healthcare/how-cf-care-is-delivered/cf-clinics-in-canada' + '">' + 'cystic fibrosis: find a clinic' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.cysticfibrosis.ca/about-cf/covid-19-information-for-cf-community/caregiver-resources' + '">' + 'cystic fibrosis: caregiver resources' + '</a><br>');
+				document.write('<a href="' + 'https://www.cysticfibrosis.ca/our-programs/healthcare/how-cf-care-is-delivered/cf-clinics-in-canada' + '">' + 'cystic fibrosis: find a clinic' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Sickle Cell'))) {
 				if (province.includes('Ontario')) {
 					document.write('<a href="' + 'https://sicklecellanemia.ca/' + '">' + 'sickle cell awareness group of ontario' + '</a><br>');
-			
+
 					flag7 = false;
 				}
-				
+
 			}
 
 			if (condition.some(conditions => conditions.includes('Chronic pain'))) {
-			document.write('<a href="' + 'https://www.canada.ca/en/public-health/services/diseases/chronic-pain.html' + '">' + 'canada public health: chronic pain resources' + '</a><br>');
-			
+				document.write('<a href="' + 'https://www.canada.ca/en/public-health/services/diseases/chronic-pain.html' + '">' + 'canada public health: chronic pain resources' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Fibromyalgia'))) {
-			document.write('<a href="' + 'https://fibrocanada.ca/en/' + '">' + 'fibromyalgia association canada: landing page' + '</a><br>');
-			document.write('<a href="' + 'https://fibrocanada.ca/en/resources/federal-programs-benefits-services/' + '">' + 'fibromyalgia association canada: federal programs benefits and services' + '</a><br>');
-			
+				document.write('<a href="' + 'https://fibrocanada.ca/en/' + '">' + 'fibromyalgia association canada: landing page' + '</a><br>');
+				document.write('<a href="' + 'https://fibrocanada.ca/en/resources/federal-programs-benefits-services/' + '">' + 'fibromyalgia association canada: federal programs benefits and services' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Covid'))) {
-			document.write('<a href="' + 'https://longcovidresourcescanada.ca/' + '">' + 'long covid resources canada' + '</a><br>');
-			
+				document.write('<a href="' + 'https://longcovidresourcescanada.ca/' + '">' + 'long covid resources canada' + '</a><br>');
+
 				flag7 = false;
 			}
 
 			if (condition.some(conditions => conditions.includes('Arthritis'))) {
-			document.write('<a href="' + 'https://arthritis.ca/get-involved/participate/find-an-event-near-you' + '">' + 'arthritis society of canada: event finder' + '</a><br>');
-			document.write('<a href="' + 'https://arthritis.ca/support-education/navigating-through-arthritis' + '">' + 'arthritis society of canada: navigating care' + '</a><br>');
-			document.write('<a href="' + 'https://arthritis.ca/support-education/mental-health' + '">' + 'arthritis society of canada: mental health' + '</a><br>');
-			document.write('<a href="' + 'https://arthritis.ca/support-education/navigating-through-arthritis/care-options' + '">' + 'arthritis society of canada: care options' + '</a><br>');
-			document.write('<a href="' + 'https://arthritis.ca/support-education' + '">' + 'arthritis society of canada' + '</a><br>');
-			document.write('<a href="' + 'https://arthritis.ca/' + '">' + 'arthritis society of canada' + '</a><br>');
-			
+				document.write('<a href="' + 'https://arthritis.ca/get-involved/participate/find-an-event-near-you' + '">' + 'arthritis society of canada: event finder' + '</a><br>');
+				document.write('<a href="' + 'https://arthritis.ca/support-education/navigating-through-arthritis' + '">' + 'arthritis society of canada: navigating care' + '</a><br>');
+				document.write('<a href="' + 'https://arthritis.ca/support-education/mental-health' + '">' + 'arthritis society of canada: mental health' + '</a><br>');
+				document.write('<a href="' + 'https://arthritis.ca/support-education/navigating-through-arthritis/care-options' + '">' + 'arthritis society of canada: care options' + '</a><br>');
+				document.write('<a href="' + 'https://arthritis.ca/support-education' + '">' + 'arthritis society of canada' + '</a><br>');
+				document.write('<a href="' + 'https://arthritis.ca/' + '">' + 'arthritis society of canada' + '</a><br>');
+
 				flag7 = false;
 			}
 
@@ -760,12 +764,12 @@
 			}
 
 			if (condition.some(conditions => conditions.includes('ADHD'))) {
-			document.write('<a href="' + 'https://caddac.ca/programs-and-events/#adhd-resource-navigator' + '">' + 'centre for ADHD awareness canada- resource navigator' + '</a><br>');
-			document.write('<a href="' + 'https://caddac.ca/find-a-resource/' + '">' + 'centre for ADHD awareness canada- resource location' + '</a><br>');
-			
+				document.write('<a href="' + 'https://caddac.ca/programs-and-events/#adhd-resource-navigator' + '">' + 'centre for ADHD awareness canada- resource navigator' + '</a><br>');
+				document.write('<a href="' + 'https://caddac.ca/find-a-resource/' + '">' + 'centre for ADHD awareness canada- resource location' + '</a><br>');
+
 				flag7 = false;
 			}
-	
+
 
 			//FINISH HERE
 			if (flag7) {
@@ -774,7 +778,7 @@
 		</script>
 	</fieldset>
 
-<!-- 	<fieldset id="veteranFieldset">
+	<!-- 	<fieldset id="veteranFieldset">
 		<legend>Resources for Veterans</legend>
 		<script>
 
@@ -806,14 +810,14 @@
 		<div id="resourcesContainer"></div>
 		<script>
 			let flag8 = true;
-	
+
 			// Make sure to define and assign appropriate values to the variables used in the conditional statements
-	
+
 			if (veteran.includes('yes') && registered.includes('no')) {
 				appendResourceLink('https://www.veterans.gc.ca/eng/services', 'Registering with veteran affairs');
 				flag8 = false;
 			}
-	
+
 			if (information.some(info => info.includes('Advance care planning'))) {
 				appendResourceLink('https://www.advancecareplanning.ca/', 'Advance Care Planning');
 				flag8 = false;
@@ -821,11 +825,11 @@
 					appendResourceLink('https://www.advancecareplanning.ca/resource/first-nations-acp-resources/', 'Indigenous specific Advance Care Planning resources');
 				}
 			}
-	
+
 			if (flag8) {
 				document.getElementById('veteranFieldset').style.display = 'none';
 			}
-	
+
 			function appendResourceLink(url, label) {
 				const link = document.createElement('a');
 				link.href = url;
@@ -836,111 +840,111 @@
 			}
 		</script>
 	</fieldset>
-	
+
 
 	<fieldset id="communityCareFieldset">
 		<legend>Provinical home and community care </legend>
 		<script>
 
 			const homeCareLinks = {
-			'Alberta': 'https://www.albertahealthservices.ca/cc/page15488.aspx',
-			'British Columbia': 'https://www2.gov.bc.ca/gov/content/family-social-supports/seniors/home-community-care',
-			'Manitoba': 'https://www.gov.mb.ca/health/homecare/',
-			'New Brunswick': {
-				'NB Health Council Home Care Services': 'https://nbhc.ca/home-care-services',
-				'NB Home Support Association List of Home Care Agencies': 'http://nbhsa.ca/english/home-care-agencies',
-				'Homes First NB': 'https://www2.gnb.ca/content/gnb/en/departments/social_development/promos/home_first.html',
-				'Social Supports NB Home Support Services': 'https://socialsupportsnb.ca/en/program/home-support-services'
-			},
-			'Newfoundland and Labrador': 'https://mha.easternhealth.ca/wp-content/uploads/sites/7/2020/01/Provincial-Home-Support-Brochure.pdf',
-			'Nova Scotia': {
-				'NS Gov Homecare': 'https://novascotia.ca/dhw/ccs/home-care.asp',
-				'NS Health Homecare and Community Care Services': 'https://www.nshealth.ca/content/home-care-and-community-care-services'
-			},
-			'Northwest Territories': 'https://www.nthssa.ca/sites/nthssa/files/resources/home_care_jmedit_0.pdf',
-			'Nunavut': 'https://www.gov.nu.ca/programs-services/home-and-community-care',
-			'Ontario': 'https://healthcareathome.ca/home',
-			'Prince Edward Island': 'https://www.princeedwardisland.ca/en/information/health-pei/home-care-program',
-			'Quebec': 'https://cisss-outaouais.gouv.qc.ca/language/en/accessing-a-service/living-with-a-loss-of-autonomy-and-services-for-seniors/home-care-support-services/',
-			'Saskatchewan': 'https://www.saskatchewan.ca/residents/health/accessing-health-care-services/care-at-home-and-outside-the-hospital',
-			'Yukon': {
-				'Yukon Gov - Learn about Home Care Program': 'https://yukon.ca/en/health-and-wellness/care-services/learn-about-home-care-program',
-				'Yukon Health Guide - Care Supports': 'https://ykhealthguide.org/support.html',
-				'Continuing Care - Finding Services in Yukon': 'https://eservices.gov.yk.ca/en/find-employee/organization-detail-location/Health-and-Social-Services/Continuing-Care'
-			}
+				'Alberta': 'https://www.albertahealthservices.ca/cc/page15488.aspx',
+				'British Columbia': 'https://www2.gov.bc.ca/gov/content/family-social-supports/seniors/home-community-care',
+				'Manitoba': 'https://www.gov.mb.ca/health/homecare/',
+				'New Brunswick': {
+					'NB Health Council Home Care Services': 'https://nbhc.ca/home-care-services',
+					'NB Home Support Association List of Home Care Agencies': 'http://nbhsa.ca/english/home-care-agencies',
+					'Homes First NB': 'https://www2.gnb.ca/content/gnb/en/departments/social_development/promos/home_first.html',
+					'Social Supports NB Home Support Services': 'https://socialsupportsnb.ca/en/program/home-support-services'
+				},
+				'Newfoundland and Labrador': 'https://mha.easternhealth.ca/wp-content/uploads/sites/7/2020/01/Provincial-Home-Support-Brochure.pdf',
+				'Nova Scotia': {
+					'NS Gov Homecare': 'https://novascotia.ca/dhw/ccs/home-care.asp',
+					'NS Health Homecare and Community Care Services': 'https://www.nshealth.ca/content/home-care-and-community-care-services'
+				},
+				'Northwest Territories': 'https://www.nthssa.ca/sites/nthssa/files/resources/home_care_jmedit_0.pdf',
+				'Nunavut': 'https://www.gov.nu.ca/programs-services/home-and-community-care',
+				'Ontario': 'https://healthcareathome.ca/home',
+				'Prince Edward Island': 'https://www.princeedwardisland.ca/en/information/health-pei/home-care-program',
+				'Quebec': 'https://cisss-outaouais.gouv.qc.ca/language/en/accessing-a-service/living-with-a-loss-of-autonomy-and-services-for-seniors/home-care-support-services/',
+				'Saskatchewan': 'https://www.saskatchewan.ca/residents/health/accessing-health-care-services/care-at-home-and-outside-the-hospital',
+				'Yukon': {
+					'Yukon Gov - Learn about Home Care Program': 'https://yukon.ca/en/health-and-wellness/care-services/learn-about-home-care-program',
+					'Yukon Health Guide - Care Supports': 'https://ykhealthguide.org/support.html',
+					'Continuing Care - Finding Services in Yukon': 'https://eservices.gov.yk.ca/en/find-employee/organization-detail-location/Health-and-Social-Services/Continuing-Care'
+				}
 			};
 
 			let flag3 = true;
 
 			if (province.includes('Alberta') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Alberta'] + '">home care alberta' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Alberta'] + '">home care alberta' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('British Columbia') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['British Columbia'] + '">home and community care BC' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['British Columbia'] + '">home and community care BC' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Manitoba') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Manitoba'] + '">home care services in MB' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Manitoba'] + '">home care services in MB' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('New Brunswick') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['New Brunswick']['NB Health Council Home Care Services'] + '">NB Health Council Home Care Services' + '</a><br>');
-			document.write('<a href="' + homeCareLinks['New Brunswick']['NB Home Support Association List of Home Care Agencies'] + '">NB Home Support Association List of Home Care Agencies' + '</a><br>');
-			document.write('<a href="' + homeCareLinks['New Brunswick']['Homes First NB'] + '">Homes First NB' + '</a><br>');
-			document.write('<a href="' + homeCareLinks['New Brunswick']['Social Supports NB Home Support Services'] + '">Social Supports NB Home Support Services' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['New Brunswick']['NB Health Council Home Care Services'] + '">NB Health Council Home Care Services' + '</a><br>');
+				document.write('<a href="' + homeCareLinks['New Brunswick']['NB Home Support Association List of Home Care Agencies'] + '">NB Home Support Association List of Home Care Agencies' + '</a><br>');
+				document.write('<a href="' + homeCareLinks['New Brunswick']['Homes First NB'] + '">Homes First NB' + '</a><br>');
+				document.write('<a href="' + homeCareLinks['New Brunswick']['Social Supports NB Home Support Services'] + '">Social Supports NB Home Support Services' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Newfoundland and Labrador') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Newfoundland and Labrador'] + '">provincial home support program' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Newfoundland and Labrador'] + '">provincial home support program' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Nova Scotia') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Nova Scotia']['NS Gov Homecare'] + '">NS Gov Homecare' + '</a><br>');
-			document.write('<a href="' + homeCareLinks['Nova Scotia']['NS Health Homecare and Community Care Services'] + '">NS Health Homecare and Community Care Services' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Nova Scotia']['NS Gov Homecare'] + '">NS Gov Homecare' + '</a><br>');
+				document.write('<a href="' + homeCareLinks['Nova Scotia']['NS Health Homecare and Community Care Services'] + '">NS Health Homecare and Community Care Services' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Northwest Territories') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Northwest Territories'] + '">NWT Health authorities- home care resources' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Northwest Territories'] + '">NWT Health authorities- home care resources' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Nunavut') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Nunavut'] + '">home and community care ministry of nunavut' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Nunavut'] + '">home and community care ministry of nunavut' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Ontario') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Ontario'] + '">Home and Community Care Support Services Ontario' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Ontario'] + '">Home and Community Care Support Services Ontario' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Prince Edward Island') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Prince Edward Island'] + '">Home Care Program PEI' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Prince Edward Island'] + '">Home Care Program PEI' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Quebec') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Quebec'] + '">Home Care Support Services Quebec' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Quebec'] + '">Home Care Support Services Quebec' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Saskatchewan') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Saskatchewan'] + '">Care at home and outside of the hospital Saskatechewan' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Saskatchewan'] + '">Care at home and outside of the hospital Saskatechewan' + '</a><br>');
+				flag3 = false;
 			}
 
 			if (province.includes('Yukon') && (information.some(info => info.includes('Transitioning')) || information.some(info => info.includes('LTC')))) {
-			document.write('<a href="' + homeCareLinks['Yukon']['Yukon Gov - Learn about Home Care Program'] + '">Yukon Gov - Learn about Home Care Program' + '</a><br>');
-			document.write('<a href="' + homeCareLinks['Yukon']['Yukon Health Guide - Care Supports'] + '">Yukon Health Guide - Care Supports' + '</a><br>');
-			document.write('<a href="' + homeCareLinks['Yukon']['Continuing Care - Finding Services in Yukon'] + '">Continuing Care - Finding Services in Yukon' + '</a><br>');
-			flag3 = false;
+				document.write('<a href="' + homeCareLinks['Yukon']['Yukon Gov - Learn about Home Care Program'] + '">Yukon Gov - Learn about Home Care Program' + '</a><br>');
+				document.write('<a href="' + homeCareLinks['Yukon']['Yukon Health Guide - Care Supports'] + '">Yukon Health Guide - Care Supports' + '</a><br>');
+				document.write('<a href="' + homeCareLinks['Yukon']['Continuing Care - Finding Services in Yukon'] + '">Continuing Care - Finding Services in Yukon' + '</a><br>');
+				flag3 = false;
 			}
 
 
@@ -963,7 +967,7 @@
 				document.write('<a href="' + 'https://211ontario.ca/results/?sa=&latitude=43.70317077636719&longitude=-79.51219177246094&searchLocation=Toronto&searchTerms=&exct=0&sd=25&ss=Distance&topicPath=139' + '">211 - other language translation</a><br>');
 				flag4 = false;
 			}
-	
+
 
 			//FINISH HERE
 			if (flag4) {
@@ -980,12 +984,12 @@
 			let flag5 = true;
 
 			if (mood >= 2) {
-				document.write('You have reported having low mood, this tool is not a diagnostic tool, therefore, it is recommneded that individuals discuss lower mood feelings with their family physician<br><br>'+
-				'<a href="' + 'https://www.canada.ca/en/public-health/services/chronic-diseases/mental-illness/what-help-myself-feel-depressed.html ' + '">What to do if depressed' + '</a><br>');
+				document.write('You have reported having low mood, C-CART is not a diagnostic tool, therefore, it is recommneded that individuals discuss lower mood feelings with their family physician<br><br>' +
+					'<a href="' + 'https://www.canada.ca/en/public-health/services/chronic-diseases/mental-illness/what-help-myself-feel-depressed.html ' + '">What to do if depressed' + '</a><br>');
 				document.write('<a href="' + 'https://www.cma.ca/physician-wellness-hub/topics/depression' + '">CMHA depression</a><br>');
 				flag5 = false;
 			}
-	
+
 
 			//FINISH HERE
 			if (flag5) {
@@ -998,11 +1002,11 @@
 		<legend>Educational Resource</legend>
 		<script>
 
-			flag9=true;
+			flag9 = true;
 
 			if (barriers.length > 0) {
-				document.write('<a href="' + 'http://general.baycrest.org/caregiver-mod3/story.html' + '">Training Module-How to seek help </a><br>');
-				flag9=false;
+				document.write('<a href="' + 'http://general.baycrest.org/caregiver-mod3/story.html' + '">Baycrest Training Module - How to seek help </a><br>');
+				flag9 = false;
 			}
 
 
@@ -1013,13 +1017,16 @@
 
 		</script>
 	</fieldset>
-	
+
 
 	<footer>
 		<div class="footer-content">
-			<div class="organization-name">Baycrest</div>
-			<div class="contact-info">Contact us: 416-785-2500</div>
+			<div class="organization-name">&copy;Baycrest (2023)</div>
+			<div class="terms-info">
+				<a href="terms.html">Terms of Use & Privacy Policy</a>
+			  </div>			  
 		</div>
 	</footer>
 </body>
+
 </html>
