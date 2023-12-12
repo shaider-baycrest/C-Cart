@@ -487,12 +487,12 @@
 			let flag7 = true;
 
 			if (condition.some(conditions => conditions.includes('Dementia'))) {
+				document.write('<a href="' + 'https://www.baycrest.org/Baycrest/Coming-to-Baycrest/For-Family-Caregivers' + '">' + "Baycrest: for family caregivers" + '   </a><br>');
 				document.write('<a href="' + 'https://alzheimer.ca/nb/en' + '">' + "Alzheimer's Society Canada: landing page" + '   </a><br>');
 				document.write('<a href="' + 'https://alzheimer.ca/en/help-support/dementia-resources/national-resource-library' + '">' + "Alzheimer's Society Canada: national resource library" + '   </a><br>');
 				document.write('<a href="' + 'https://alzheimer.ca/en/help-support/programs-services' + '">' + "Alzheimer's Society programs and services" + '   </a><br>');
 				document.write('<a href="' + 'https://ontariocaregiver.ca/for-caregivers/health-conditions/im-caring-for-someone-with-dementia-or-alzheimers-disease/' + '">' + "OCO caregiver supports" + '   </a><br>');
 				document.write('<a href="' + 'https://alzheimer.ca/en/help-support/im-caring-person-living-dementia' + '">' + "caregiver supports (Alzheimer's Society)" + '   </a><br>');
-				document.write('<a href="' + 'https://www.baycrest.org/Baycrest/Coming-to-Baycrest/For-Family-Caregivers' + '">' + "Baycrest: for family caregivers" + '   </a><br>');
 				flag7 = false;
 				if (indigenous.includes('Yes')) {
 					document.write('<a href="' + 'https://www.i-caare.ca/' + '">' + "I-CAARE: Indigenous cognition and aging research exchange" + '</a><br>');
@@ -1021,6 +1021,31 @@
 		</script>
 	</fieldset>
 
+	<fieldset id="indigenousFieldset">
+		<legend>Indigenous resources</legend>
+		<script>
+
+			let flag10 = true;
+
+			if (indigenous.includes('Yes')) {
+				document.write('<a href="' + 'www.Hopeforwellness.ca' + '">' + "Hope for Wellness" + '</a><br>');
+				document.write('<a href="' + 'https://nafc.ca/friendship-centres/find-a-friendship-centre' + '">' + "National Association of Friendship Centres" + '</a><br>');
+				flag10 = false;
+			}
+
+
+			//FINISH HERE
+			if (flag10) {
+				document.getElementById('indigenousFieldset').style.display = 'none';
+			}
+		</script>
+	</fieldset>
+
+
+	<p id="surveyPrompt"> If you have found this tool beneficial please consider filling out this survey to help us improve. </p>
+
+    <button id="redirectToSurveyButton" type="button" onclick="redirectToSurvey()">Continue to Survey</button><br><br>
+
 
 	<footer>
 		<div class="footer-content">
@@ -1032,4 +1057,10 @@
 	</footer>
 </body>
 
+
+<script>
+	function redirectToSurvey() {
+		window.location.href = "./survey.html"; // Replace with your desired URL
+	}
+</script>
 </html>

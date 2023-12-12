@@ -316,3 +316,23 @@ pre {
 	font-family: "Courier New", monospace;
 	font-size: 14px;
   }
+
+  #redirectToSurveyButton {
+	background-color: #41c4dc;
+	/*#4CAF50*/
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+#redirectToSurveyButton:hover {
+	background-color: #030d49;
+}
+
+#surveyPrompt {
+	margin-left: 15px;
+}

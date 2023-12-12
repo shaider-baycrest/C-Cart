@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Results</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+    <style>
+         textarea {
+            font-size: 16px; /* Adjust the font size as needed */
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 80%;
+        }
+
+        .slider-labels {
+            position: absolute;
+            top: -20px; /* Adjust the position of the labels */
+            display: flex;
+            justify-content: space-between;
+            width: 65%;
+        }
+
+        .slider-label {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+	<section id="header">
+		<img class="logo" src="images/KoschitzkyLogo.png" alt="logo">
+		<h1>&nbsp;&nbsp;&nbsp;Canadian-Caregiver Assessment Resource Tool (C-CART)</h1>
+		
+	</section>
+
+	<section id="intro">
+        <p>Thank you for taking the time to share your insights on the C-CART platform. Your feedback is important to us!</p>
+	
+	</section>
+
+<form action="/submit-feedback" method="post">
+    <h2>C-CART Platform Feedback Survey</h2>
+
+    <p>1. Please rate your overall satisfaction with the C-CART platform:</p>
+    <label>
+        <input type="radio" name="satisfaction" value="very-dissatisfied"> Very Dissatisfied
+    </label>
+    <label>
+        <input type="radio" name="satisfaction" value="dissatisfied"> Dissatisfied
+    </label>
+    <label>
+        <input type="radio" name="satisfaction" value="neutral"> Neutral
+    </label>
+    <label>
+        <input type="radio" name="satisfaction" value="satisfied"> Satisfied
+    </label>
+    <label>
+        <input type="radio" name="satisfaction" value="very-satisfied"> Very Satisfied
+    </label>
+
+    <p>2. Please rate the ease of use of the C-CART platform:</p>
+    <label>
+        <input type="radio" name="ease-of-use" value="very-difficult"> Very Difficult to Use
+    </label>
+    <label>
+        <input type="radio" name="ease-of-use" value="difficult"> Difficult to Use
+    </label>
+    <label>
+        <input type="radio" name="ease-of-use" value="neutral"> Neutral / Neither Difficult nor Easy to Use
+    </label>
+    <label>
+        <input type="radio" name="ease-of-use" value="easy"> Easy to Use
+    </label>
+    <label>
+        <input type="radio" name="ease-of-use" value="very-easy"> Very Easy to Use
+    </label>
+
+    <p>3. Please rate how much the C-CART platform changed your level of awareness of available caregiving resources:</p>
+    <label>
+        <input type="radio" name="awareness-change" value="not-at-all"> No at all (I already knew all the resources recommended)
+    </label>
+    <label>
+        <input type="radio" name="awareness-change" value="a-little"> A little
+    </label>
+    <label>
+        <input type="radio" name="awareness-change" value="somewhat"> Somewhat
+    </label>
+    <label>
+        <input type="radio" name="awareness-change" value="significantly"> Significantly
+    </label>
+    <label>
+        <input type="radio" name="awareness-change" value="very-much"> Very much (I did not know any of the resources recommended)
+    </label>
+
+    <p>4. Please rate the helpfulness of the resources recommended by the C-CART platform:</p>
+    <label>
+        <input type="radio" name="helpfulness" value="very-unhelpful"> Very Unhelpful
+    </label>
+    <label>
+        <input type="radio" name="helpfulness" value="unhelpful"> Unhelpful
+    </label>
+    <label>
+        <input type="radio" name="helpfulness" value="neutral"> Neutral
+    </label>
+    <label>
+        <input type="radio" name="helpfulness" value="helpful"> Helpful
+    </label>
+    <label>
+        <input type="radio" name="helpfulness" value="very-helpful"> Very Helpful
+    </label>
+
+    <p>5. Do you intend to use the recommended resources?</p>
+    <label>
+        <input type="radio" name="intend-to-use" value="definitely-not"> Definitely Not
+    </label>
+    <label>
+        <input type="radio" name="intend-to-use" value="unlikely"> Unlikely
+    </label>
+    <label>
+        <input type="radio" name="intend-to-use" value="neutral"> Neutral
+    </label>
+    <label>
+        <input type="radio" name="intend-to-use" value="likely"> Likely
+    </label>
+    <label>
+        <input type="radio" name="intend-to-use" value="definitely-will"> Definitely Will
+    </label>
+
+    <p>Please tell us the primary reason for your intention to use or not use the recommended resources:</p>
+    <textarea name="intention-comment" rows="5" cols="100"></textarea>
+
+    <p>6. How likely is it that you would recommend the C-CART platform to a friend or colleague?</p>
+    <br>
+    <div class="slider-container">
+        <label>
+            <input type="range" name="recommendation" min="0" max="10" step="1" value="5" style="width: 65%;" list="tickmarks">
+            <!-- Datalist associated with the input using the 'list' attribute -->
+            <datalist id="tickmarks">
+                <option value="0"></option>
+                <option value="2"></option>
+                <option value="4"></option>
+                <option value="6"></option>
+                <option value="8"></option>
+                <option value="10"></option>
+            </datalist>
+        </label>
+        <div class="slider-labels">
+            <div class="slider-label">Not at all Likely</div>
+            <div class="slider-label"></div>
+            <div class="slider-label"></div>
+            <div class="slider-label"></div>
+            <div class="slider-label">Extremely Likely</div>
+        </div>
+    </div>
+    <p>Please tell us the primary reason for the score you provided:</p>
+    <textarea name="recommendation-comment" rows="5" cols="100"></textarea>
+
+    <p>7. Please provide any additional comments or suggestions for improving the C-CART platform:</p>
+    <textarea name="additional-comments" rows="5" cols="100"></textarea>
+
+    <br>
+    <br>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+
+<footer>
+    <div class="footer-content">
+        <div class="organization-name">&copy; Baycrest (2023)</div>
+        <div class="terms-info">
+            <a class="policy-link" href="terms.html">Terms of Use & Privacy Policy</a>
+          </div>			  
+    </div>
+</footer>
+
+</body>
+</html>
